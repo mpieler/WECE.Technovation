@@ -28,23 +28,11 @@
         android:onClick="moveToTakeBreath"
         android:text="@string/takeBreath"
         android:textSize="16sp" />
-    
-    <TextView
-        android:id="@+id/classHelpTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/mainMenuTextTitle"
-        android:layout_below="@+id/takeBreathTitle"
-        android:layout_marginTop="40dp"
-        android:clickable="true"
-        android:text="@string/classHelp"
-        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/optionsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/classHelpTitle"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="32dp"
         android:layout_marginLeft="28dp"
@@ -56,22 +44,11 @@
         android:id="@+id/budgetTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/optionsTitle"
+        android:layout_alignLeft="@+id/mainMenuTextTitle"
         android:layout_below="@+id/mainMenuTextTitle"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="42dp"
         android:clickable="true"
         android:text="@string/budget"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/plannerTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/mainMenuTextTitle"
-        android:layout_below="@+id/classHelpTitle"
-        android:layout_marginTop="41dp"
-        android:clickable="true"
-        android:text="@string/planner"
         android:textSize="16sp" />
 
 </RelativeLayout>
