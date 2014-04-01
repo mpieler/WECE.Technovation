@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">My First App</string>
-    <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
+    <string name="app_name">Breezer</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="budget">Budget</string>
+    <string name="takeBreath">Take a Breath</string>
+    <string name="classHelp">Class Helper</string>
+    <string name="planner">Planner</string>
+    <string name="options">Options</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="title_activity_take_breath">TakeBreathActivity</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>

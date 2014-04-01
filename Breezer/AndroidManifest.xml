@@ -23,19 +23,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.breezer.DisplayMessageActivity"
-            android:label="@string/title_activity_display_message" >
+            android:name="com.example.breezer.TakeBreathActivity"
+            android:label="@string/title_activity_take_breath" >
         </activity>
-        <activity
-        android:name="com.example.myfirstapp.DisplayMessageActivity"
-        android:label="@string/title_activity_display_message"
-        android:parentActivityName="com.example.myfirstapp.MainActivity" >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.example.myfirstapp.MainActivity" />
-    </activity>
-        
-        
     </application>
 
 </manifest>

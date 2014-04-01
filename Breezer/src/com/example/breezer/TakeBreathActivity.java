@@ -1,6 +1,5 @@
 package com.example.breezer;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -10,33 +9,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.os.Build;
 
-public class DisplayMessageActivity extends ActionBarActivity {
+public class TakeBreathActivity extends ActionBarActivity {
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
-	    super.onCreate(savedInstanceState);
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_take_breath);
 
-	    // Get the message from the intent
-	    Intent intent = getIntent();
-	    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-
-	    // Create the text view
-	    TextView textView = new TextView(this);
-	    textView.setTextSize(40);
-	    textView.setText(message);
-
-	    // Set the text view as the activity layout
-	    setContentView(textView);
+		if (savedInstanceState == null) {
+			getSupportFragmentManager().beginTransaction()
+					.add(R.id.container, new PlaceholderFragment()).commit();
+		}
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.display_message, menu);
+		getMenuInflater().inflate(R.menu.take_breath, menu);
 		return true;
 	}
 
@@ -63,7 +55,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_display_message,
+			View rootView = inflater.inflate(R.layout.fragment_take_breath,
 					container, false);
 			return rootView;
 		}

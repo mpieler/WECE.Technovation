@@ -64,12 +64,12 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 	
-	/** Called when the user clicks the Send button */
-	public void sendMessage(View view) {
-	    Intent intent = new Intent(this, DisplayMessageActivity.class);
-	    EditText editText = (EditText) findViewById(R.id.edit_message);
-	    String message = editText.getText().toString();
-	    intent.putExtra(EXTRA_MESSAGE, message);
+	/** Called when the user clicks takeBreath link */
+	public void moveToTakeBreath(View view) {
+	    Intent intent = new Intent(this, TakeBreathActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
 	    startActivity(intent);
 	}
 
