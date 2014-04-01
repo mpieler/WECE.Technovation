@@ -3,6 +3,7 @@ package com.example.breezer;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class TakeBreathActivity extends ActionBarActivity {
+public class PrescriptionActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -60,5 +61,12 @@ public class TakeBreathActivity extends ActionBarActivity {
 			return rootView;
 		}
 	}
-
+	/** Called when the user clicks AddNewPrescription link */
+	public void moveToAddNew(View view) {
+	    Intent intent = new Intent(this, NewPrescriptionActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
+	}
 }

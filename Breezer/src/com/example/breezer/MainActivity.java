@@ -66,7 +66,7 @@ public class MainActivity extends ActionBarActivity {
 	
 	/** Called when the user clicks takeBreath link */
 	public void moveToTakeBreath(View view) {
-	    Intent intent = new Intent(this, TakeBreathActivity.class);
+	    Intent intent = new Intent(this, PrescriptionActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
 	    //String message = editText.getText().toString();
 	    //intent.putExtra(EXTRA_MESSAGE, message);

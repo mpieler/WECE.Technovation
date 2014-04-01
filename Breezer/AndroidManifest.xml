@@ -23,8 +23,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.breezer.TakeBreathActivity"
-            android:label="@string/title_activity_take_breath" >
+            android:name="com.example.breezer.PrescriptionActivity"
+            android:label="@string/title_activity_prescription" >
+        </activity>
+        <activity
+            android:name="com.example.breezer.NewPrescriptionActivity"
+            android:label="@string/title_activity_new_prescription" >
         </activity>
     </application>
 
