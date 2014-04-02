@@ -30,6 +30,10 @@
             android:name="com.example.breezer.NewPrescriptionActivity"
             android:label="@string/title_activity_new_prescription" >
         </activity>
+        <activity
+            android:name="com.example.breezer.SymptomsActivity"
+            android:label="@string/title_activity_symptoms" >
+        </activity>
     </application>
 
 </manifest>
