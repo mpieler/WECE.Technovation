@@ -64,8 +64,8 @@ public class MainActivity extends ActionBarActivity {
 		}
 	}
 	
-	/** Called when the user clicks Prescription link */
-	public void moveToPrecription(View view) {
+	/** Called when the user clicks the Prescription link */
+	public void moveToPrescription(View view) {
 	    Intent intent = new Intent(this, PrescriptionActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
 	    //String message = editText.getText().toString();
@@ -73,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
 	    startActivity(intent);
 	}
 
-	/** Called when the user clicks Symptoms link */
+	/** Called when the user clicks the Symptoms link */
 	public void moveToSymptoms(View view) {
 	    Intent intent = new Intent(this, SymptomsActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -82,4 +82,12 @@ public class MainActivity extends ActionBarActivity {
 	    startActivity(intent);
 	}
 	
+	/** Called when the user clicks the Options link */
+	public void moveToOptions(View view) {
+	    Intent intent = new Intent(this, OptionsActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
+	}
 }

@@ -11,12 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class NewPrescriptionActivity extends ActionBarActivity {
+public class OptionsActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_new_prescription);
+		setContentView(R.layout.activity_options);
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -28,7 +28,7 @@ public class NewPrescriptionActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.new_prescription, menu);
+		getMenuInflater().inflate(R.menu.options, menu);
 		return true;
 	}
 
@@ -55,8 +55,8 @@ public class NewPrescriptionActivity extends ActionBarActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(
-					R.layout.fragment_new_prescription, container, false);
+			View rootView = inflater.inflate(R.layout.fragment_options,
+					container, false);
 			return rootView;
 		}
 	}
