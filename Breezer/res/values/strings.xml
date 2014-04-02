@@ -13,5 +13,9 @@
     <string name="title_activity_new_prescription">NewPrescriptionActivity</string>
     <string name="prescriptionName">Name of Medication: </string>
     <string name="title_activity_symptoms">SymptomsActivity</string>
+    <string name="add_symptoms">Add New Symptoms</string>
+    <string name="view_symptoms">View Symptom Log</string>
+    <string name="title_activity_add_symptom">Add Symptom Activity</string>
+    <string name="title_activity_symtoms_log">Symtoms Log Activity</string>
 
 </resources>
