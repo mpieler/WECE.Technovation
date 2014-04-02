@@ -34,6 +34,10 @@
             android:name="com.example.breezer.SymptomsActivity"
             android:label="@string/title_activity_symptoms" >
         </activity>
+        <activity
+            android:name="com.example.breezer.OptionsActivity"
+            android:label="@string/title_activity_options" >
+        </activity>
     </application>
 
 </manifest>

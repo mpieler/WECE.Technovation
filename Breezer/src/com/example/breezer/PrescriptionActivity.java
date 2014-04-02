@@ -61,8 +61,8 @@ public class PrescriptionActivity extends ActionBarActivity {
 			return rootView;
 		}
 	}
-	/** Called when the user clicks AddNewPrescription link */
-	public void moveToAddNew(View view) {
+	/** Called when the user clicks the AddNewPrescription link */
+	public void moveToAddNewPrescription(View view) {
 	    Intent intent = new Intent(this, NewPrescriptionActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
 	    //String message = editText.getText().toString();
