@@ -26,19 +26,31 @@
         android:layout_alignLeft="@+id/symptomsTitle"
         android:layout_below="@+id/symptomsTitle"
         android:clickable="true"
-        android:onClick="moveToPrescription"
+        android:onClick="moveToAdd_Symptom"
         android:text="@string/add_symptoms"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/editSymptomsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/viewSymptomsTitle"
+        android:layout_below="@+id/viewSymptomsTitle"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="moveToEdit_Symptoms"
+        android:text="@string/edit_symptom"
         android:textSize="16sp" />
 
     <TextView
         android:id="@+id/viewSymptomsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/symptomsTitle"
-        android:layout_below="@+id/symptomsTitle"
-        android:layout_marginTop="78dp"
+        android:layout_alignLeft="@+id/addSymptomsTitle"
+        android:layout_below="@+id/addSymptomsTitle"
+        android:layout_marginTop="54dp"
         android:clickable="true"
-        android:onClick="moveToPrescription"
+        android:onClick="moveToSymptoms_Log"
         android:text="@string/view_symptoms"
         android:textSize="16sp" />
 

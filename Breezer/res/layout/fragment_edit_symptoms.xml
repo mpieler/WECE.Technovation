@@ -6,19 +6,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.breezer.AddSymptomActivity$PlaceholderFragment" >
+    tools:context="com.example.breezer.EditSymptomsActivity$PlaceholderFragment" >
 
     <TextView
-        android:id="@+id/addSymptomsTitle"
+        android:id="@+id/editSymptomsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:clickable="true"
         android:padding="20dp"
-        android:text="@string/add_symptoms"
+        android:text="@string/title_activity_edit_symptoms"
         android:textSize="30sp" />
-
-    
 
 </RelativeLayout>

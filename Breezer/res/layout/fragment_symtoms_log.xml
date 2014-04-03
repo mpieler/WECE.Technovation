@@ -19,4 +19,5 @@
         android:text="@string/title_activity_symtoms_log"
         android:textSize="30sp" />
 
+
 </RelativeLayout>
