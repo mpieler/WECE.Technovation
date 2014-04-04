@@ -65,7 +65,7 @@ public class MainActivity extends ActionBarActivity {
 	}
 	
 	/** Called when the user clicks Prescription link */
-	public void moveToPrecription(View view) {
+	public void moveToPrescription(View view) {
 	    Intent intent = new Intent(this, PrescriptionActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
 	    //String message = editText.getText().toString();
