@@ -15,7 +15,7 @@
     <string name="prescriptionName">Name of Medication: </string>
     <string name="prescriptionFrequency">How often do you take you medication: </string>
 	<string name="prescriptionSize">Size of the medication: </string>
-	<string name="prescritionColor">Color of medication: </string>
+	<string name="prescriptionColor">Color of medication: </string>
 	<string name="prescriptionAmount">Dosis of medication: </string>
 	<string name="prescriptionStartdate">Medication starting date: </string>
 	<string name="prescriptionRemaining">Amount of medicine you have remaining: </string>

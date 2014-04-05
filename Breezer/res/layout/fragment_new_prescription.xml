@@ -8,6 +8,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.breezer.NewPrescriptionActivity$PlaceholderFragment" >
 
+<<<<<<< HEAD
    <EditText
        android:id="@+id/prescriptionFrequency"
        android:layout_width="wrap_content"
@@ -74,5 +75,65 @@
        android:layout_alignLeft="@+id/prescriptionColor"
        android:ems="10"
        android:hint="@string/prescriptionSize" />
+=======
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prescriptionName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="30dp"
+        android:text="@string/prescriptionRemaining" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="18dp"
+        android:text="@string/prescriptionStartdate" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="43dp"
+        android:text="@string/prescriptionAmount" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="18dp"
+        android:text="@string/prescriptionColor" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="28dp"
+        android:text="@string/prescriptionSize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="30dp"
+        android:text="@string/prescriptionFrequency" />
+>>>>>>> 370334d0654403b4c27cf17808adc37ea6be3af2
 
 </RelativeLayout>
