@@ -9,53 +9,62 @@
     tools:context="com.example.breezer.NewPrescriptionActivity$PlaceholderFragment" >
 
     <TextView
-        
-		android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionName"/>
-        
-     <TextView
-         
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/prescriptionFrequency"/>
-        
-      <TextView
-          
-          
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionSize"/>
-        
-      <TextView
-          
-          
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescritionColor"/>
-        
-   	<TextView
-              
-              
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionAmount"/>
-        
+        android:text="@string/prescriptionName" />
+
     <TextView
-        
-        
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/prescriptionStartdate"/>
-        
-   	<TextView
-          
-          
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="30dp"
+        android:text="@string/prescriptionRemaining" />
+
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/prescriptionRemaining"/>
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="18dp"
+        android:text="@string/prescriptionStartdate" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="43dp"
+        android:text="@string/prescriptionAmount" />
 
-    
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginTop="18dp"
+        android:text="@string/prescriptionColor" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="28dp"
+        android:text="@string/prescriptionSize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="30dp"
+        android:text="@string/prescriptionFrequency" />
 
 </RelativeLayout>
