@@ -9,8 +9,53 @@
     tools:context="com.example.breezer.NewPrescriptionActivity$PlaceholderFragment" >
 
     <TextView
+        
+		android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prescriptionName"/>
+        
+     <TextView
+         
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/prescriptionFrequency"/>
+        
+      <TextView
+          
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prescriptionSize"/>
+        
+      <TextView
+          
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prescritionColor"/>
+        
+   	<TextView
+              
+              
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prescriptionAmount"/>
+        
+    <TextView
+        
+        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prescriptionStartdate"/>
+        
+   	<TextView
+          
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prescriptionRemaining"/>
+
+
+    
 
 </RelativeLayout>
