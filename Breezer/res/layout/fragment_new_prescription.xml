@@ -8,54 +8,71 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.breezer.NewPrescriptionActivity$PlaceholderFragment" >
 
-    <TextView
-        
-		android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionName"/>
-        
-     <TextView
-         
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionFrequency"/>
-        
-      <TextView
-          
-          
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionSize"/>
-        
-      <TextView
-          
-          
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescritionColor"/>
-        
-   	<TextView
-              
-              
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionAmount"/>
-        
-    <TextView
-        
-        
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionStartdate"/>
-        
-   	<TextView
-          
-          
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/prescriptionRemaining"/>
+   <EditText
+       android:id="@+id/prescriptionFrequency"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/precriptionStartdate"
+       android:layout_alignLeft="@+id/precriptionStartdate"
+       android:ems="10"
+       android:hint="@string/prescriptionFrequency" />
 
+   <EditText
+       android:id="@+id/prescriptionColor"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/prescriptionAmount"
+       android:layout_alignLeft="@+id/prescriptionAmount"
+       android:ems="10"
+       android:hint="@string/prescriptionColor" />
 
-    
+   <EditText
+       android:id="@+id/prescriptionAmount"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/prescriptionFrequency"
+       android:layout_centerHorizontal="true"
+       android:ems="10"
+       android:hint="@string/prescriptionAmount" />
+
+   <EditText
+       android:id="@+id/precriptionStartdate"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/prescriptionRemaining"
+       android:layout_alignLeft="@+id/prescriptionRemaining"
+       android:ems="10"
+       android:hint="@string/prescriptionStartdate" >
+
+       <requestFocus />
+   </EditText>
+
+   <EditText
+       android:id="@+id/prescriptionRemaining"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/prescriptionAmount"
+       android:layout_alignParentBottom="true"
+       android:layout_marginBottom="62dp"
+       android:ems="10"
+       android:hint="@string/prescriptionRemaining" />
+
+   <EditText
+       android:id="@+id/prescriptionName"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/prescriptionSize"
+       android:layout_alignLeft="@+id/prescriptionColor"
+       android:ems="10"
+       android:hint="@string/prescriptionName" />
+
+   <EditText
+       android:id="@+id/prescriptionSize"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/prescriptionColor"
+       android:layout_alignLeft="@+id/prescriptionColor"
+       android:ems="10"
+       android:hint="@string/prescriptionSize" />
 
 </RelativeLayout>
