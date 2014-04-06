@@ -50,6 +50,10 @@
             android:name="com.example.breezer.EditSymptomsActivity"
             android:label="@string/title_activity_edit_symptoms" >
         </activity>
+        <activity
+            android:name="com.example.breezer.TestDatabaseActivity"
+            android:label="@string/title_activity_test_database" >
+        </activity>
     </application>
 
 </manifest>
