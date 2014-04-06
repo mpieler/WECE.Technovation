@@ -1223,7 +1223,6 @@ containing a value of this type.
         public static final int title_activity_prescription=0x7f0a0015;
         public static final int title_activity_symptoms=0x7f0a001f;
         public static final int title_activity_symtoms_log=0x7f0a0023;
-        public static final int title_activity_test_database=0x7f0a0027;
         public static final int view_symptoms=0x7f0a0021;
     }
     public static final class style {
