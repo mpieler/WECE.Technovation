@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< Original
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.breezer"
     android:versionCode="1"
@@ -50,7 +52,7 @@
             android:name="com.example.breezer.EditSymptomsActivity"
             android:label="@string/title_activity_edit_symptoms" >
         </activity>
-<<<<<<< HEAD
+<<<<<<< HEAD
         <activity
             android:name="com.example.breezer.SavedPrescription"
             android:label="@string/title_activity_saved_prescription" >
@@ -61,7 +63,22 @@
         </activity>
 =======
 
->>>>>>> 15003325c13d98017a0071f24cb21b83e2170583
+>>>>>>> 15003325c13d98017a0071f24cb21b83e2170583
     </application>
 
-</manifest>
+</manifest>=======
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <application>
+        <activity
+            android:name="com.example.breezer.SavedPrescription"
+            android:label="@string/title_activity_saved_prescription"
+            android:parentActivityName="com.example.breezer.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.breezer.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>>>>>>>> Added
+
