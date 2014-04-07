@@ -14,11 +14,12 @@
     <string name="title_activity_new_prescription">New Prescription Activity</string>
     <string name="prescriptionName">Name of Medication: </string>
     <string name="prescriptionFrequency">How often do you take you medication: </string>
-	<string name="prescriptionSize">Size of the medication: </string>
-	<string name="prescriptionColor">Color of medication: </string>
-	<string name="prescriptionAmount">Dosis of medication: </string>
-	<string name="prescriptionStartdate">Medication starting date: </string>
-	<string name="prescriptionRemaining">Amount of medicine you have remaining: </string>
+    <string name="prescriptionSize">Size of the medication: </string>
+    <string name="prescriptionColor">Color of medication: </string>
+    <string name="prescriptionAmount">Dosis of medication: </string>
+    <string name="prescriptionStartdate">Medication starting date: </string>
+    <string name="prescriptionRemaining">Medicine left: </string>
+    <string name="saveButton">Save </string>
     <string name="title_activity_symptoms">Symptoms Activity</string>
     <string name="add_symptoms">Add New Symptoms</string>
     <string name="view_symptoms">View Symptom Log</string>
@@ -27,5 +28,6 @@
     <string name="title_activity_options">Options Activity</string>
     <string name="edit_symptom">Edit Symptoms</string>
     <string name="title_activity_edit_symptoms">Edit Symptoms Activity</string>
+    <string name="title_activity_saved_prescription">SavedPrescription</string>
 
 </resources>

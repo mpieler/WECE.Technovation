@@ -49,5 +49,11 @@
         android:onClick="moveToSymptoms"
         android:text="@string/symptoms"
         android:textSize="16sp" />
+    
+    <Button
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:text="@string/saveButton"
+    	android:onClick="SavedPrescription" />
 
 </RelativeLayout>

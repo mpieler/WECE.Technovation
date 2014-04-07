@@ -1,17 +1,14 @@
 package com.example.breezer;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
@@ -71,6 +68,15 @@ public class MainActivity extends ActionBarActivity {
 	    //String message = editText.getText().toString();
 	    //intent.putExtra(EXTRA_MESSAGE, message);
 	    startActivity(intent);
+	}
+	
+	/** Called when the user clicks saveButton */
+	public void SavedPrescription(View view) {
+		Intent intent = new Intent(this, SavedPrescriptionActivity.class);
+		//EditText editText = (EditText) (R.id.edit_message);
+		//String message = editText.getText().toString();
+		//intent.putExtra(EXTRA_MESSAGE, message);
+		startActivity(intent);
 	}
 
 	/** Called when the user clicks Symptoms link */
