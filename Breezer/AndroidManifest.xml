@@ -50,6 +50,7 @@
             android:name="com.example.breezer.EditSymptomsActivity"
             android:label="@string/title_activity_edit_symptoms" >
         </activity>
+<<<<<<< HEAD
         <activity
             android:name="com.example.breezer.SavedPrescription"
             android:label="@string/title_activity_saved_prescription" >
@@ -58,6 +59,9 @@
             android:name="com.example.breezer.SavedPrescriptionActivity"
             android:label="@string/title_activity_saved_prescription" >
         </activity>
+=======
+
+>>>>>>> 15003325c13d98017a0071f24cb21b83e2170583
     </application>
 
 </manifest>
