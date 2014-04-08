@@ -53,7 +53,7 @@
         <activity
             android:name="com.example.breezer.SavedPrescriptionActivity"
             android:label="@string/title_activity_saved_prescription" >
-        </activity>
+        </activity>
     </application>
 
 </manifest>
