@@ -70,15 +70,6 @@ public class MainActivity extends ActionBarActivity {
 	    startActivity(intent);
 	}
 	
-	/** Called when the user clicks saveButton */
-	public void SavedPrescription(View view) {
-		Intent intent = new Intent(this, SavedPrescriptionActivity.class);
-		//EditText editText = (EditText) (R.id.edit_message);
-		//String message = editText.getText().toString();
-		//intent.putExtra(EXTRA_MESSAGE, message);
-		startActivity(intent);
-	}
-
 	/** Called when the user clicks Symptoms link */
 	public void moveToSymptoms(View view) {
 	    Intent intent = new Intent(this, SymptomsActivity.class);
