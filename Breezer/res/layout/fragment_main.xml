@@ -17,18 +17,6 @@
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/optionsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
-        android:layout_marginLeft="28dp"
-        android:clickable="true"
-        android:onClick="moveToOptions"
-        android:text="@string/options"
-        android:textSize="16sp" />
-
-    <TextView
         android:id="@+id/prescriptionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,12 +37,33 @@
         android:onClick="moveToSymptoms"
         android:text="@string/symptoms"
         android:textSize="16sp" />
-    
-    <Button
-    	android:layout_width="wrap_content"
-    	android:layout_height="wrap_content"
-    	android:text="@string/saveButton"
-    	android:onClick="SavedPrescription" />
 
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="SavedPrescription"
+        android:text="@string/saveButton" />
+
+    <TextView
+        android:id="@+id/optionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="24dp"
+        android:clickable="true"
+        android:onClick="moveToOptions"
+        android:text="@string/options"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/medtimemymedbutton" />
 
 </RelativeLayout>
