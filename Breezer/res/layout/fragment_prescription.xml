@@ -16,6 +16,11 @@
         android:onClick="moveToAddNewPrescription"
         android:text="@string/addPrescription"
         android:textSize="16sp" />
+	<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/saveButton"
+    android:onClick="savedPrecription" />
 	
 	
 

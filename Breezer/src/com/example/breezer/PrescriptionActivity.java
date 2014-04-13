@@ -1,5 +1,7 @@
 package com.example.breezer;
 
+
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -64,6 +66,14 @@ public class PrescriptionActivity extends ActionBarActivity {
 	/** Called when the user clicks the AddNewPrescription link */
 	public void moveToAddNewPrescription(View view) {
 	    Intent intent = new Intent(this, NewPrescriptionActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
+	}
+	/** Called when the user clicks the saveButton */
+	public void sendMessage(View view) {
+	    Intent intent = new Intent(this, SavedPrescriptionActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
 	    //String message = editText.getText().toString();
 	    //intent.putExtra(EXTRA_MESSAGE, message);
