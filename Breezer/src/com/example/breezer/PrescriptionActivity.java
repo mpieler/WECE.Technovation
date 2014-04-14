@@ -12,10 +12,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.os.Build;
+
 
 public class PrescriptionActivity extends ActionBarActivity {
 
+	public static  String EXTRA_MESSAGE = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,11 +75,12 @@ public class PrescriptionActivity extends ActionBarActivity {
 	    startActivity(intent);
 	}
 	/** Called when the user clicks the saveButton */
-	public void sendMessage(View view) {
+	public void saveButton(View view) {
 	    Intent intent = new Intent(this, SavedPrescriptionActivity.class);
-	    //EditText editText = (EditText) findViewById(R.id.edit_message);
-	    //String message = editText.getText().toString();
-	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    EditText editText = (EditText) findViewById(R.id.prescriptionName);
+	    String message = editText.getText().toString();
+	    String prescriptionName = null;
+		intent.putExtra(EXTRA_MESSAGE, prescriptionName);
 	    startActivity(intent);
 	}
 }

@@ -14,6 +14,7 @@
     <string name="title_activity_new_prescription">New Prescription Activity</string>
     <string name="prescriptionName">Name of Medication: </string>
     <string name="prescriptionFrequency">How often do you take you medication: </string>
+    <string name="inputPfrequency">You take your medication every: </string>
     <string name="prescriptionSize">Size of the medication: </string>
     <string name="prescriptionColor">Color of medication: </string>
     <string name="prescriptionAmount">Dosis of medication: </string>

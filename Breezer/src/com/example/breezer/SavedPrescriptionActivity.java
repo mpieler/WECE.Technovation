@@ -1,5 +1,7 @@
 package com.example.breezer;
 
+import com.example.breezer.NewPrescriptionActivity.PlaceholderFragment;
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -15,13 +17,15 @@ import android.os.Build;
 
 public class SavedPrescriptionActivity extends ActionBarActivity {
 
+	
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 
 	    // Get the message from the intent
 	    Intent intent = getIntent();
-	    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+	    String message = intent.getStringExtra(PrescriptionActivity.EXTRA_MESSAGE);
 
 	    // Create the text view
 	    TextView textView = new TextView(this);
@@ -31,6 +35,7 @@ public class SavedPrescriptionActivity extends ActionBarActivity {
 	    // Set the text view as the activity layout
 	    setContentView(textView);
 	}
+
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -70,5 +75,5 @@ public class SavedPrescriptionActivity extends ActionBarActivity {
 			return rootView;
 		}
 	}
-
+	
 }

@@ -38,12 +38,7 @@
         android:text="@string/symptoms"
         android:textSize="16sp" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="SavedPrescription"
-        android:text="@string/saveButton" />
+
 
     <TextView
         android:id="@+id/optionsTitle"
