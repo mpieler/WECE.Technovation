@@ -12,10 +12,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.os.Build;
 
 public class NewPrescriptionActivity extends ActionBarActivity {
+	
+	public final static String EXTRA_MESSAGE = "com.example.breezer.MESSAGE";
 
 
 	@Override
@@ -65,6 +68,15 @@ public class NewPrescriptionActivity extends ActionBarActivity {
 					R.layout.fragment_new_prescription, container, false);
 			return rootView;
 		}
+	}
+	
+	/** Called when the user clicks the saveButton */
+	public void sendMessage(View view) {
+	    Intent intent = new Intent(this, SavedPrescriptionActivity.class);
+	    EditText editText = (EditText) findViewById(R.id.prescriptionName);
+	    String message = editText.getText().toString();
+		intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
 	}
 
 }

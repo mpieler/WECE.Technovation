@@ -1208,9 +1208,9 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a0013;
         public static final int addPrescription=0x7f0a0012;
-        public static final int add_symptoms=0x7f0a0022;
+        public static final int add_symptoms=0x7f0a0023;
         public static final int app_name=0x7f0a000d;
-        public static final int edit_symptom=0x7f0a0027;
+        public static final int edit_symptom=0x7f0a0028;
         public static final int hello_world=0x7f0a0016;
         public static final int inputPfrequency=0x7f0a001a;
         public static final int main_menu=0x7f0a000e;
@@ -1223,18 +1223,19 @@ containing a value of this type.
         public static final int prescriptionRemaining=0x7f0a001f;
         public static final int prescriptionSize=0x7f0a001b;
         public static final int prescriptionStartdate=0x7f0a001e;
-        public static final int saveButton=0x7f0a0020;
+        public static final int saveButton=0x7f0a0021;
+        public static final int savedPrescription=0x7f0a0020;
         public static final int symptoms=0x7f0a0010;
-        public static final int title_activity_add_symptom=0x7f0a0024;
-        public static final int title_activity_edit_symptoms=0x7f0a0028;
+        public static final int title_activity_add_symptom=0x7f0a0025;
+        public static final int title_activity_edit_symptoms=0x7f0a0029;
         public static final int title_activity_main=0x7f0a0014;
         public static final int title_activity_new_prescription=0x7f0a0017;
-        public static final int title_activity_options=0x7f0a0026;
+        public static final int title_activity_options=0x7f0a0027;
         public static final int title_activity_prescription=0x7f0a0015;
-        public static final int title_activity_saved_prescription=0x7f0a0029;
-        public static final int title_activity_symptoms=0x7f0a0021;
-        public static final int title_activity_symtoms_log=0x7f0a0025;
-        public static final int view_symptoms=0x7f0a0023;
+        public static final int title_activity_saved_prescription=0x7f0a002a;
+        public static final int title_activity_symptoms=0x7f0a0022;
+        public static final int title_activity_symtoms_log=0x7f0a0026;
+        public static final int view_symptoms=0x7f0a0024;
     }
     public static final class style {
         /** 
