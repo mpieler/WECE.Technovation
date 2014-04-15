@@ -11,72 +11,65 @@
         android:layout_height="wrap_content"
         android:src="@drawable/medtimescreenbg" />
 
-    <TextView
-        android:id="@+id/symptomsTitle"
-        android:layout_width="500dip"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/prescriptionTitle"
-        android:layout_centerHorizontal="true"
-        android:clickable="true"
-        android:onClick="moveToSymptoms"
-        android:text="@string/symptoms"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/prescriptionTitle"
-        android:layout_width="500dip"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/symptomsTitle"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="106dp"
-        android:clickable="true"
-        android:onClick="moveToPrescription"
-        android:text="@string/prescription"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/optionsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="18dp"
-        android:layout_toRightOf="@+id/prescriptionTitle"
-        android:clickable="true"
-        android:onClick="moveToOptions"
-        android:text="@string/options"
-        android:textSize="16sp" />
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout1"
+    <LinearLayout
+        android:id="@+id/Layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" >
-    </RelativeLayout>
+        
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="160dip"
+            android:layout_marginBottom="150dp"
+            android:background="@drawable/medtimemymedbutton"
+            android:clickable="true"
+            android:onClick="moveToPrescription"
+            android:scaleType="fitCenter"
+            android:text="@string/prescription" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/Layout"
         android:layout_width="wrap_content"
-        android:layout_height="160dip"
-        android:layout_alignBottom="@+id/relativeLayout1"
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/medtimemymedbutton"
-        android:clickable="true"
-        android:onClick="moveToPrescription"
-        android:scaleType="fitCenter"
-        android:text="@string/prescription" />
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+        
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="160dip"
+            android:layout_marginTop="175dp"
+            android:background="@drawable/medtimesymptomsbutton"
+            android:clickable="true"
+            android:onClick="moveToSymptoms"
+            android:scaleType="fitCenter"
+            android:text="@string/symptoms" />
+        
+    </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/imageButton1"
+    <LinearLayout
+        android:id="@+id/Layout"
         android:layout_width="wrap_content"
-        android:layout_height="160dip"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/relativeLayout1"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/medtimesymptomsbutton"
-        android:clickable="true"
-        android:onClick="moveToSymptoms"
-        android:scaleType="fitCenter"
-        android:text="@string/symptoms" />
-
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/imageButton1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="167dp"
+            android:layout_marginTop="403dp"
+            android:clickable="true"
+            android:onClick="moveToOptions"
+            android:text="@string/options"
+            android:textSize="20sp" />
+        
+    </LinearLayout>
+    
 </RelativeLayout>
