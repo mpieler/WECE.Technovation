@@ -33,5 +33,6 @@
     <string name="title_activity_saved_prescription">SavedPrescription</string>
     <string name="title_activity_prescription_database">PrescriptionDatabaseActivity</string>
     <string name="title_activity_feed_reader_db_helper">FeedReaderDbHelperActivity</string>
+    <string name="add_symptom_other">Write your symptoms here.</string>
 
 </resources>
