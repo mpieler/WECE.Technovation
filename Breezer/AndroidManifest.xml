@@ -54,6 +54,14 @@
             android:name="com.example.breezer.SavedPrescriptionActivity"
             android:label="@string/title_activity_saved_prescription" >
         </activity>
+        <activity
+            android:name="com.example.breezer.PrescriptionDatabaseActivity"
+            android:label="@string/title_activity_prescription_database" >
+        </activity>
+        <activity
+            android:name="com.example.breezer.FeedReaderDbHelperActivity"
+            android:label="@string/title_activity_feed_reader_db_helper" >
+        </activity>
     </application>
 
 </manifest>
