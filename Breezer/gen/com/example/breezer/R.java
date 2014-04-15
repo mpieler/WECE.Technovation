@@ -1033,15 +1033,9 @@ containing a value of this type.
         public static final int icon=0x7f05002a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
-<<<<<<< HEAD
-        public static final int imageButton1=0x7f050045;
-        public static final int imageButton2=0x7f050044;
-        public static final int imageView1=0x7f05003f;
-=======
         public static final int imageButton1=0x7f050048;
         public static final int imageButton2=0x7f050047;
         public static final int imageView1=0x7f050042;
->>>>>>> daae47e1e7954bf72f1a08b3aed0da6d7b42a3fa
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int logSymptomsTitle=0x7f050059;
@@ -1061,11 +1055,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-<<<<<<< HEAD
-        public static final int relativeLayout1=0x7f050043;
-=======
         public static final int relativeLayout1=0x7f050046;
->>>>>>> daae47e1e7954bf72f1a08b3aed0da6d7b42a3fa
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1076,7 +1066,7 @@ containing a value of this type.
         public static final int search_plate=0x7f050036;
         public static final int search_src_text=0x7f050037;
         public static final int search_voice_btn=0x7f05003b;
-        public static final int seekBar1=0x7f05003f;
+        public static final int seekBar1=0x7f050040;
         public static final int shortcut=0x7f05002e;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
@@ -1085,7 +1075,7 @@ containing a value of this type.
         public static final int submit_area=0x7f050039;
         public static final int symptomsTitle=0x7f050043;
         public static final int tabMode=0x7f050002;
-        public static final int textView1=0x7f050040;
+        public static final int textView1=0x7f05003f;
         public static final int textView2=0x7f050054;
         public static final int textView3=0x7f05004d;
         public static final int textView4=0x7f050051;
