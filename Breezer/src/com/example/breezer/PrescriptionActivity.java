@@ -74,13 +74,5 @@ public class PrescriptionActivity extends ActionBarActivity {
 	    //intent.putExtra(EXTRA_MESSAGE, message);
 	    startActivity(intent);
 	}
-	/** Called when the user clicks the saveButton */
-	public void saveButton(View view) {
-	    Intent intent = new Intent(this, SavedPrescriptionActivity.class);
-	    EditText editText = (EditText) findViewById(R.id.prescriptionName);
-	    String message = editText.getText().toString();
-	    String prescriptionName = null;
-		intent.putExtra(EXTRA_MESSAGE, prescriptionName);
-	    startActivity(intent);
-	}
+	
 }
