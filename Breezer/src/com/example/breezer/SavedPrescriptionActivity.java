@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.os.Build;
+import android.provider.BaseColumns;
 
 public class SavedPrescriptionActivity extends ActionBarActivity {
 
@@ -25,7 +26,7 @@ public class SavedPrescriptionActivity extends ActionBarActivity {
 
 	    // Get the message from the intent
 	    Intent intent = getIntent();
-	    String message = intent.getStringExtra(PrescriptionActivity.EXTRA_MESSAGE);
+	    String message = intent.getStringExtra(NewPrescriptionActivity.EXTRA_MESSAGE);
 
 	    // Create the text view
 	    TextView textView = new TextView(this);
@@ -75,5 +76,6 @@ public class SavedPrescriptionActivity extends ActionBarActivity {
 			return rootView;
 		}
 	}
+	
 	
 }
