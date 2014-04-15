@@ -5,60 +5,55 @@
     android:layout_height="match_parent"
     android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/mainMenuTextTitle"
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:src="@drawable/medtimescreenbg" />
+
+    <TextView
+        android:id="@+id/symptomsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prescriptionTitle"
         android:layout_centerHorizontal="true"
         android:clickable="true"
-        android:padding="20dp"
-        android:text="@string/main_menu"
-        android:textSize="30sp" />
+        android:onClick="moveToSymptoms"
+        android:text="@string/symptoms"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="600dip"
+        android:layout_height="500dip"
+        android:layout_alignBottom="@+id/optionsTitle"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/medtimemymedbutton2"
+        android:maxHeight="300dp"
+        android:maxWidth="400dp" />
 
     <TextView
         android:id="@+id/prescriptionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/mainMenuTextTitle"
-        android:layout_below="@+id/mainMenuTextTitle"
+        android:layout_alignLeft="@+id/symptomsTitle"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="106dp"
         android:clickable="true"
         android:onClick="moveToPrescription"
         android:text="@string/prescription"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/symptomsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/mainMenuTextTitle"
-        android:layout_below="@+id/prescriptionTitle"
-        android:clickable="true"
-        android:onClick="moveToSymptoms"
-        android:text="@string/symptoms"
-        android:textSize="16sp" />
-
-
-
-    <TextView
         android:id="@+id/optionsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginBottom="18dp"
+        android:layout_toRightOf="@+id/prescriptionTitle"
         android:clickable="true"
         android:onClick="moveToOptions"
         android:text="@string/options"
         android:textSize="16sp" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/medtimemymedbutton" />
 
 </RelativeLayout>
