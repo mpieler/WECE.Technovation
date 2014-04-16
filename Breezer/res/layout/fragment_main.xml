@@ -20,8 +20,8 @@
         
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="160dip"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
             android:layout_marginBottom="150dp"
             android:background="@drawable/medtimemymedbutton"
             android:clickable="true"
@@ -40,8 +40,8 @@
         
         <ImageButton
             android:id="@+id/imageButton1"
-            android:layout_width="wrap_content"
-            android:layout_height="160dip"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
             android:layout_marginTop="175dp"
             android:background="@drawable/medtimesymptomsbutton"
             android:clickable="true"
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="167dp"
-            android:layout_marginTop="403dp"
+            android:layout_marginTop="450dp"
             android:clickable="true"
             android:onClick="moveToOptions"
             android:text="@string/options"
