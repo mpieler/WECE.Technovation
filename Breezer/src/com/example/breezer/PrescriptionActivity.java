@@ -1,10 +1,10 @@
 package com.example.breezer;
 
+import java.util.ArrayList;
+import java.util.List;
 
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,11 +12,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.os.Build;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 
-public class PrescriptionActivity extends ActionBarActivity {
+public class PrescriptionActivity extends Activity {
 
 	public static  String EXTRA_MESSAGE = null;
 	@Override
@@ -24,10 +26,10 @@ public class PrescriptionActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_prescription);
 
-		if (savedInstanceState == null) {
+		/*if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
+		}*/
 	}
 
 	@Override
@@ -75,15 +77,15 @@ public class PrescriptionActivity extends ActionBarActivity {
 	    startActivity(intent);
 	}
 	
-	public void findPrescription(){
-				/*
-				PrescriptionDataSource db = new PrescriptionDataSource(this);
+	public void populateListViewFromDB(){
+	
+				PrescriptionDataSource db = new PrescriptionDataSource(this.getApplicationContext());
 				db.open();
 				
 				List<Prescription> prescriptionList = new ArrayList<Prescription>();
-				prescriptionList = db.getAllprescriptions();
+				prescriptionList = db.getAllPrescriptions();
 				int size = prescriptionList.size();
-				String[] prescriptionNames = new String[size];
+				final String[] prescriptionNames = new String[size];
 				//final String[] membership = new String[size];
 				Prescription[] prescription = new Prescription[size];
 				
@@ -100,8 +102,14 @@ public class PrescriptionActivity extends ActionBarActivity {
 				ListView listViewFromDB = (ListView) findViewById(R.id.listViewFromDB);
 				ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, prescriptionNames);
 				listViewFromDB.setAdapter(adapter);
-				*/
+				
+				listViewFromDB.setOnItemClickListener(new OnItemClickListener() {
+					public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
+						  String membershipID = prescriptionNames[position];
+						  Intent selectedIntent = new Intent(getApplicationContext(), MainActivity.class);
+						  selectedIntent.putExtra("member", membershipID);
+						  startActivity(selectedIntent);
+					   }
+				});
 	}
-	
-	
 }

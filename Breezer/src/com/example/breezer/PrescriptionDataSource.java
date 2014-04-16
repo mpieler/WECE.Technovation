@@ -65,7 +65,7 @@ public class PrescriptionDataSource {
 	    cursor.close();
 	    return newPrescription;*/
 	  }
-/*
+
 	  public void deletePrescription(Prescription prescription) {
 	    String id = prescription.getPrescriptionName();
 	    System.out.println("prescription deleted with name: " + id);
@@ -73,7 +73,7 @@ public class PrescriptionDataSource {
 	        + " = " + id, null);
 	  }
 
-	  public List<Prescription> getAllprescriptions() {
+	  public List<Prescription> getAllPrescriptions() {
 	    List<Prescription> prescriptions = new ArrayList<Prescription>();
 	    Cursor cursor = database.query(PrescriptionDatabaseActivity.TABLE_NAME,
 	        allColumns, null, null, null, null, null);
@@ -94,5 +94,5 @@ public class PrescriptionDataSource {
 		prescription.setPrescriptionName(cursor.getString(1));
 	    return prescription;
 	  }
-	*/
+	
 }
