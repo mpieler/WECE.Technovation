@@ -25,6 +25,8 @@ public class PrescriptionActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_prescription);
+		ListView listViewFromDB = (ListView) findViewById(R.id.listViewFrom);
+		populateListViewFromDB(listViewFromDB);
 
 		/*if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -77,7 +79,7 @@ public class PrescriptionActivity extends Activity {
 	    startActivity(intent);
 	}
 	
-	public void populateListViewFromDB(){
+	public void populateListViewFromDB(ListView listViewFromDB){
 	
 				PrescriptionDataSource db = new PrescriptionDataSource(this.getApplicationContext());
 				db.open();
@@ -91,7 +93,7 @@ public class PrescriptionActivity extends Activity {
 				
 				//transfer from array list to array
 				for(int i=0; i < prescriptionList.size(); i++){
-					prescription[i] = prescriptionList.get(i+1);
+					prescription[i] = prescriptionList.get(i);
 				}
 				
 				for(int i = 0; i < size; i++){
@@ -99,10 +101,10 @@ public class PrescriptionActivity extends Activity {
 					//membership[i] = person[i].getMembership();
 				}
 				
-				ListView listViewFromDB = (ListView) findViewById(R.id.listViewFromDB);
+				//ListView listViewFromDB = (ListView) findViewById(R.id.listViewFrom);
 				ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, prescriptionNames);
 				listViewFromDB.setAdapter(adapter);
-				
+				/*
 				listViewFromDB.setOnItemClickListener(new OnItemClickListener() {
 					public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
 						  String membershipID = prescriptionNames[position];
@@ -110,6 +112,6 @@ public class PrescriptionActivity extends Activity {
 						  selectedIntent.putExtra("member", membershipID);
 						  startActivity(selectedIntent);
 					   }
-				});
+				});*/
 	}
 }
