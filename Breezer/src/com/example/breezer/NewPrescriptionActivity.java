@@ -15,8 +15,6 @@ import android.widget.EditText;
 public class NewPrescriptionActivity extends ActionBarActivity {
 	
 	private PrescriptionDataSource datasource;
-	//public final static String EXTRA_MESSAGE = "com.example.breezer.MESSAGE";
-
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -99,8 +97,9 @@ public class NewPrescriptionActivity extends ActionBarActivity {
 	    message = editText.getText().toString();
 	    prescription.setPrescriptionRemaining(message);
 	    
-	    
+	    datasource = new PrescriptionDataSource(this.getApplicationContext());
 	    //save the new prescription
+	    //datasource.open();
 	    datasource.createPrescription(prescription);
 	    
 	    //move back to screen

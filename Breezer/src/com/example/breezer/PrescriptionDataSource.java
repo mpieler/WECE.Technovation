@@ -38,8 +38,8 @@ public class PrescriptionDataSource {
 	  }
 
 	  public void createPrescription(Prescription prescription) {
-		  System.out.print(prescription.toString());
-		/*database = dbHelper.getWritableDatabase();
+		System.err.print(prescription);
+		database = dbHelper.getWritableDatabase();
 		  
 	    ContentValues values = new ContentValues();
 		values.put(PrescriptionDatabaseActivity.COLUMN_NAME_PNAME, prescription.prescriptionName);
