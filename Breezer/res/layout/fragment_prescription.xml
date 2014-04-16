@@ -16,8 +16,5 @@
         android:onClick="moveToAddNewPrescription"
         android:text="@string/addPrescription"
         android:textSize="16sp" />
-	
-	
-	
 
 </RelativeLayout>

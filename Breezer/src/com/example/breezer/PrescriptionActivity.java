@@ -75,4 +75,33 @@ public class PrescriptionActivity extends ActionBarActivity {
 	    startActivity(intent);
 	}
 	
+	public void findPrescription(){
+				/*
+				PrescriptionDataSource db = new PrescriptionDataSource(this);
+				db.open();
+				
+				List<Prescription> prescriptionList = new ArrayList<Prescription>();
+				prescriptionList = db.getAllprescriptions();
+				int size = prescriptionList.size();
+				String[] prescriptionNames = new String[size];
+				//final String[] membership = new String[size];
+				Prescription[] prescription = new Prescription[size];
+				
+				//transfer from array list to array
+				for(int i=0; i < prescriptionList.size(); i++){
+					prescription[i] = prescriptionList.get(i+1);
+				}
+				
+				for(int i = 0; i < size; i++){
+					prescriptionNames[i] = prescription[i].getPrescriptionName();
+					//membership[i] = person[i].getMembership();
+				}
+				
+				ListView listViewFromDB = (ListView) findViewById(R.id.listViewFromDB);
+				ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, prescriptionNames);
+				listViewFromDB.setAdapter(adapter);
+				*/
+	}
+	
+	
 }
