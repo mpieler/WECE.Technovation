@@ -1010,7 +1010,7 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int add=0x7f05005b;
         public static final int addButton=0x7f050050;
-        public static final int addPrescriptionTitle=0x7f050056;
+        public static final int addPrescriptionTitle=0x7f050055;
         public static final int addSymptomsOtherTextbox=0x7f05003e;
         public static final int addSymptomsTitle=0x7f05003d;
         public static final int always=0x7f05000b;
@@ -1042,7 +1042,7 @@ containing a value of this type.
         public static final int item_subtitle=0x7f05005e;
         public static final int item_text=0x7f05005d;
         public static final int listMode=0x7f050001;
-        public static final int listViewFrom=0x7f050055;
+        public static final int listViewFromDB=0x7f050056;
         public static final int list_item=0x7f050029;
         public static final int logSymptomsTitle=0x7f050059;
         public static final int middle=0x7f050012;
