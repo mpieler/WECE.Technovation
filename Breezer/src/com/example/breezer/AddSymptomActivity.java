@@ -9,20 +9,34 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.app.Activity;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
 
-public class AddSymptomActivity extends ActionBarActivity {
 
+public class AddSymptomActivity extends Activity implements SeekBar.OnSeekBarChangeListener{
+
+	private SeekBar seekBar;
+	private TextView textProgress, textTracking;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_symptom);
 
-		if (savedInstanceState == null) {
+		/*if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
+		}*/
+		
+		seekBar = (SeekBar)findViewById(R.id.seekbar);
+//		int p = seekBar.getProgress();
+	//	System.out.println("Current Progress = " + p);
+		seekBar.setOnSeekBarChangeListener(this);
+		textProgress = (TextView)findViewById(R.id.seekbarvalue); 
 	}
+	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -61,4 +75,25 @@ public class AddSymptomActivity extends ActionBarActivity {
 		}
 	}
 
+	@Override
+	public void onProgressChanged(SeekBar seekBar, int progress,
+			boolean fromTouch) {
+		// TODO Auto-generated method stub
+		textProgress.setText(progress + " " + getString(R.string.seekbar_from_touch) + "=" +fromTouch);
+	}
+
+
+	@Override
+	public void onStartTrackingTouch(SeekBar seekBar) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void onStopTrackingTouch(SeekBar seekBar) {
+		// TODO Auto-generated method stub
+	}
+
 }
+
