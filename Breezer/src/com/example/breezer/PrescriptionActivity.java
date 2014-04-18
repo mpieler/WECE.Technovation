@@ -110,7 +110,7 @@ public class PrescriptionActivity extends Activity {
 				listViewFromDB.setOnItemClickListener(new OnItemClickListener() {
 					public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
 						  String membershipID = prescriptionNames[position];
-						  Intent selectedIntent = new Intent(getApplicationContext(), MainActivity.class);
+						  Intent selectedIntent = new Intent(getApplicationContext(), EditPrescriptionActivity.class);
 						  selectedIntent.putExtra("member", membershipID);
 						  startActivity(selectedIntent);
 					   }

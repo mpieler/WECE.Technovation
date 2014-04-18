@@ -96,7 +96,7 @@ public class AddSymptomActivity extends Activity {
 			return rootView;
 		}
 	}
-
+/*
 	@Override
 	public void onProgressChanged(SeekBar seekBar, int progress,
 			boolean fromTouch) {
@@ -116,6 +116,6 @@ public class AddSymptomActivity extends Activity {
 	public void onStopTrackingTouch(SeekBar seekBar) {
 		// TODO Auto-generated method stub
 	}
-
+*/
 }
 

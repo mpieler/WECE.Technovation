@@ -34,8 +34,10 @@
     <string name="title_activity_prescription_database">PrescriptionDatabaseActivity</string>
     <string name="title_activity_feed_reader_db_helper">FeedReaderDbHelperActivity</string>
     <string name="add_symptom_other">Write your symptoms here.</string>
-	<string name="seekbar_tracking_on">Tracking on</string>
+    <string name="seekbar_tracking_on">Tracking on</string>
     <string name="seekbar_tracking_off">Tracking off</string>
     <string name="seekbar_from_touch">from touch</string>
-    
+    <string name="title_activity_edit__prescription_">Edit_Prescription_Activity</string>
+    <string name="title_activity_edit_prescription">EditPrescriptionActivity</string>
+
 </resources>
