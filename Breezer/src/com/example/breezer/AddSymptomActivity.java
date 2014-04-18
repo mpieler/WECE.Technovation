@@ -13,14 +13,13 @@ import android.app.Activity;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
-public class AddSymptomActivity extends Activity {
+public class AddSymptomActivity extends Activity implements SeekBar.OnSeekBarChangeListener{
 
-	//private SeekBar seekBar;
-	//private TextView textProgress, textTracking;
-	private SeekBar volumeControl = null;
+	private SeekBar seekBar = null;
+	private TextView textProgress, textTracking;
+	//private int p = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,32 +30,15 @@ public class AddSymptomActivity extends Activity {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}*/
-		/*
+		
 		seekBar = (SeekBar)findViewById(R.id.seekbar);
-//		int p = seekBar.getProgress();
-	//	System.out.println("Current Progress = " + p);
+		
+		//int p = seekBar.getProgress();
+		//System.out.println("Current Progress = " + p);
+		
 		seekBar.setOnSeekBarChangeListener(this);
-		textProgress = (TextView)findViewById(R.id.seekbarvalue); */
 		
-		volumeControl = (SeekBar) findViewById(R.id.volume_bar);
-		 
-        volumeControl.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-            int progressChanged = 0;
- 
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
-                progressChanged = progress;
-            }
- 
-            public void onStartTrackingTouch(SeekBar seekBar) {
-                // TODO Auto-generated method stub
-            }
- 
-            public void onStopTrackingTouch(SeekBar seekBar) {
-                Toast.makeText(AddSymptomActivity.this,"seek bar progress:"+progressChanged, 
-                        Toast.LENGTH_SHORT).show();
-            }
-        });
-		
+		textProgress = (TextView)findViewById(R.id.seekbarvalue); 
 	}
 	
 
@@ -101,7 +83,8 @@ public class AddSymptomActivity extends Activity {
 	public void onProgressChanged(SeekBar seekBar, int progress,
 			boolean fromTouch) {
 		// TODO Auto-generated method stub
-		textProgress.setText(progress + " " + getString(R.string.seekbar_from_touch) + "=" +fromTouch);
+		int p = progress;
+		textProgress.setText(p + " " + getString(R.string.seekbar_from_touch) + "=" +fromTouch);
 	}
 
 
@@ -118,4 +101,5 @@ public class AddSymptomActivity extends Activity {
 	}
 */
 }
+
 
