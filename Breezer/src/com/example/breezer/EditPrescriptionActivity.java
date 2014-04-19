@@ -14,25 +14,23 @@ import android.os.Build;
 
 public class EditPrescriptionActivity extends ActionBarActivity {
 
+	static String value = null;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_edit_prescription);
-
-		String value = null;
-		//test
-		
+		//test		
 		Bundle extras = getIntent().getExtras();
 		if(extras != null){
 			value = extras.getString("member");
 		}
-		TextView view = (TextView) findViewById(R.id.test);
-		view.setText(value);
 		
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.container, new PlaceholderFragment()).commit();
 		}
+
 	}
 
 	@Override
@@ -68,6 +66,10 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(
 					R.layout.fragment_edit_prescription, container, false);
+			
+			TextView view = (TextView) rootView.findViewById(R.id.textView1);//view is null
+			view.setText(value);
+			
 			return rootView;
 		}
 	}

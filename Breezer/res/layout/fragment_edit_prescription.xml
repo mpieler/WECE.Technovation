@@ -8,12 +8,10 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.breezer.EditPrescriptionActivity$PlaceholderFragment" >
 
-    <TextView
-        android:id="@+id/test"
+        <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp"
         android:text="TextView" />
 
 

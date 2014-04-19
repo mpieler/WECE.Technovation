@@ -78,7 +78,7 @@ public class AddSymptomActivity extends Activity implements SeekBar.OnSeekBarCha
 			return rootView;
 		}
 	}
-/*
+
 	@Override
 	public void onProgressChanged(SeekBar seekBar, int progress,
 			boolean fromTouch) {
@@ -99,7 +99,7 @@ public class AddSymptomActivity extends Activity implements SeekBar.OnSeekBarCha
 	public void onStopTrackingTouch(SeekBar seekBar) {
 		// TODO Auto-generated method stub
 	}
-*/
+
 }
 
 
