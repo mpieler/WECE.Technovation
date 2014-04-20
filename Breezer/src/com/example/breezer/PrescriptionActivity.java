@@ -21,8 +21,6 @@ import android.widget.AdapterView.OnItemClickListener;
 public class PrescriptionActivity extends Activity {
 
 	ListView listViewFromDB;
-	
-	public static  String EXTRA_MESSAGE = null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
