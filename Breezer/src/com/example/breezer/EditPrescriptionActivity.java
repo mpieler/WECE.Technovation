@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.os.Build;
 
@@ -158,9 +159,14 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 		    message = editText.getText().toString();
 		    prescription.setPrescriptionStartdate(message);
 		    
-		    editText = (EditText) findViewById(R.id.prescriptionAmountEntered);
+		    /*editText = (EditText) findViewById(R.id.prescriptionAmountEntered);
 		    message = editText.getText().toString();
-		    prescription.setPrescriptionAmount(message);
+		    prescription.setPrescriptionAmount(message);*/
+		    
+		    Spinner spinnerAmount = (Spinner) findViewById(R.id.amountSpinner);
+		    int amount = spinnerAmount.getId();
+		    prescription.setPrescriptionAmount(amount);
+		    
 		    
 		    editText = (EditText) findViewById(R.id.prescriptionRemainingEntered);
 		    message = editText.getText().toString();
@@ -178,4 +184,5 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 		    //intent.putExtra(EXTRA_MESSAGE, message);
 		    startActivity(intent);
 		}
+
 }

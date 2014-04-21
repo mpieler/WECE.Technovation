@@ -96,7 +96,7 @@ import android.widget.EditText;
 	    
 	    
 	    EditText amt = (EditText) findViewById(R.id.prescriptionAmount);
-	    String amount = amt.getText().toString();
+	    int amount = Integer.parseInt(amt.getText().toString());
 	    prescription.setPrescriptionAmount(amount);
 	    
 	    EditText rem = (EditText) findViewById(R.id.prescriptionRemaining);

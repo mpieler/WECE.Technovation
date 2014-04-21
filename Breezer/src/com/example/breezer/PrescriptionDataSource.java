@@ -91,7 +91,11 @@ public class PrescriptionDataSource {
 	               prescription.setPrescriptionName(cursor.getString(0));
 	               prescription.setPrescriptionSize(cursor.getString(1));
 	               prescription.setPrescriptionColor(cursor.getString(2));
-	 
+	               prescription.setPrescriptionFrequency(cursor.getString(3));
+	               prescription.setPrescriptionAmount(cursor.getInt(4));
+	               prescription.setPrescriptionStartdate(cursor.getString(5));
+	               prescription.setPrescriptionRemaining(cursor.getString(6));
+	               
 	               // Add book to books
 	               prescriptions.add(prescription);
 	           } while (cursor.moveToNext());

@@ -41,4 +41,15 @@
     <string name="title_activity_edit__prescription_">Edit_Prescription_Activity</string>
     <string name="title_activity_edit_prescription">EditPrescriptionActivity</string>
 
+    <string name="amount_prompt">Choose an amount</string>
+ 
+    <string-array name="amount_arrays">
+        <item>One at a time</item>
+        <item>Two at a time</item>
+        <item>Three at a time</item>
+        <item>Four at a time</item>
+        <item>Five at a time</item>
+    </string-array>
+    
+    
 </resources>

@@ -7,7 +7,7 @@ public class Prescription {
 	public String prescriptionSize;
 	public String prescriptionColor;
 	public String prescriptionFrequency;
-	public String prescriptionAmount;
+	public int prescriptionAmount;
 	public String prescriptionStartdate; //assuming person takes medicine at time they enter the reminder, take date from android
 	public String prescriptionRemaining;
 	
@@ -45,10 +45,10 @@ public class Prescription {
 	public void setPrescriptionFrequency(String prescriptionFrequency) {
 		this.prescriptionFrequency = prescriptionFrequency;
 	}
-	public String getPrescriptionAmount() {
+	public int getPrescriptionAmount() {
 		return prescriptionAmount;
 	}
-	public void setPrescriptionAmount(String prescriptionAmount) {
+	public void setPrescriptionAmount(int prescriptionAmount) {
 		this.prescriptionAmount = prescriptionAmount;
 	}
 	public String getPrescriptionStartdate() {
