@@ -21,6 +21,7 @@ import android.widget.AdapterView.OnItemClickListener;
 public class PrescriptionActivity extends Activity {
 
 	ListView listViewFromDB;
+	static ArrayAdapter<String> adapter;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -102,8 +103,11 @@ public class PrescriptionActivity extends Activity {
 					//membership[i] = person[i].getMembership();
 				}
 				
-				ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, prescriptionNames);
+				adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, prescriptionNames);
 				listViewFromDB.setAdapter(adapter);
+				adapter.notifyDataSetChanged();
+				listViewFromDB.invalidateViews();
+				
 				
 				listViewFromDB.setOnItemClickListener(new OnItemClickListener() {
 					public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {

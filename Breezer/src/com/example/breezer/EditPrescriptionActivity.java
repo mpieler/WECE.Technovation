@@ -1,5 +1,8 @@
 package com.example.breezer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -11,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.os.Build;
 
@@ -73,14 +77,64 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 			EditText view = (EditText) rootView.findViewById(R.id.prescriptionNameEntered);//view is null
 			view.setHint(value);
 			
-			//add more here
+			//@Michelle make template that receives from database
+			
+			//@Natasha add more here using template
 			
 			return rootView;
 		}
 	}
 
+
+	public void remove(View view) {
+		//find prescription
+		//prescription name is in value
+		datasource = new PrescriptionDataSource(this.getApplicationContext());
+		datasource.open();
+		
+		String prescriptionName = value;
+		List<Prescription> list = new ArrayList<Prescription>();
+		list = datasource.getAllPrescriptions();
+		Prescription selectedPrescription = null;
+		
+		for(int i = 0; i < list.size(); i++){
+			if(prescriptionName.equals(list.get(i).getPrescriptionName())){
+				selectedPrescription = list.get(i);
+				datasource.deletePrescription(selectedPrescription);//doesn't delete ._.
+				break;
+			}
+		}
+		
+		//ListView.listViewFromDB.RemoveAt(0);
+		
+		//move back to screen
+	    Intent intent = new Intent(this, PrescriptionActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
+		
+	}
+	
 	//this needs to save the information to the database
 		public void sendMessage(View view) {
+			//@Michelle remove prescription before adding edited one
+			datasource = new PrescriptionDataSource(this.getApplicationContext());
+			datasource.open();
+			
+			String prescriptionName = value;
+			List<Prescription> list = new ArrayList<Prescription>();
+			list = datasource.getAllPrescriptions();
+			Prescription selectedPrescription = null;
+			
+			for(int i = 0; i < list.size(); i++){
+				if(prescriptionName.equals(list.get(i).getPrescriptionName())){
+					selectedPrescription = list.get(i);
+					datasource.deletePrescription(selectedPrescription);
+					break;
+				}
+			}
+			
 			
 			//initialize prescription
 			Prescription prescription = new Prescription();

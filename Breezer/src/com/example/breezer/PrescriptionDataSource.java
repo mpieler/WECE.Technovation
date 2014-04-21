@@ -68,9 +68,10 @@ public class PrescriptionDataSource {
 
 	  public void deletePrescription(Prescription prescription) {
 	    String id = prescription.getPrescriptionName();
-	    System.out.println("prescription deleted with name: " + id);
+	    //System.out.println("prescription deleted with name: " + id);
+	    //problem here
 	    database.delete(PrescriptionDatabaseActivity.TABLE_NAME, PrescriptionDatabaseActivity.COLUMN_NAME_PNAME
-	        + " = " + id, null);
+	        + " = '" + id + "'", null);
 	  }
 
 	  public List<Prescription> getAllPrescriptions() {

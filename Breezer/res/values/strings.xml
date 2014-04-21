@@ -21,7 +21,8 @@
     <string name="prescriptionStartdate">Medication starting date: </string>
     <string name="prescriptionRemaining">Medicine left: </string>
     <string name="savedPrescription">Your Prescription is: </string>
-    <string name="saveButton">Save </string>
+    <string name="saveButton">Save</string>
+    <string name="deleteButton">Delete </string>
     <string name="title_activity_symptoms">Symptoms Activity</string>
     <string name="add_symptoms">Add New Symptoms</string>
     <string name="view_symptoms">View Symptom Log</string>
