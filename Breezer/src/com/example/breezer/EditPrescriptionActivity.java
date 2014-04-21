@@ -28,7 +28,9 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 	//@Natasha, first, initialize all static variables here. There's five: size, color, frequency, amount, remaining
 	static int amount;
 	static String color;
-	
+	static String size;
+	static String frequency;
+	static String remaining;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -45,9 +47,9 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 		//@Natasha, second, attach a value to all initialized variables
 		amount = selectedPrescription.getPrescriptionAmount();
 		color = selectedPrescription.getPrescriptionColor();
-		
-		
-		
+		size = selectedPrescription.getPrescriptionSize();
+		frequency = selectedPrescription.getPrescriptionFrequency();
+		remaining = selectedPrescription.getPrescriptionRemaining();
 		
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -106,9 +108,18 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 		
 			/*
 			//@Natasha, third assign the value to the view for all remaining variables, keep in mind their type, see templates above
-			//Spinner: amount, size, frequency EditText: color, remaining
-			 * use variables such a pAmount, pSize, etc. and amountSpinner, sizeSpinner for spinners and prescriptionColorEntered, prescriptionRemainingEntered for editTexts
+			//Spinner: amount, size, frequency EditText: remaining, color
+			 * use variables such a pAmount, pSize, etc. and amountSpinner, sizeSpinner for spinners and prescriptionRemainingEntered for editTexts
 			*/
+			//Spinner pSize = (Spinner) rootView.findViewById(R.id.sizeSpinner);
+			//pSize.setSelection(1);
+			
+			EditText pRemaining = (EditText) rootView.findViewById(R.id.prescriptionRemaining);
+			pColor.setText(remaining, TextView.BufferType.EDITABLE);
+			
+
+			//Spinner pFrequency = (Spinner) rootView.findViewById(R.id.frequencySpinner);
+			//pFrequency.setSelection(1);
 			
 			return rootView;
 		}
