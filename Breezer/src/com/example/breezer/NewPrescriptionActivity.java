@@ -1,7 +1,10 @@
 package com.example.breezer;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 
-public class NewPrescriptionActivity extends ActionBarActivity {
+@SuppressLint("SimpleDateFormat") public class NewPrescriptionActivity extends ActionBarActivity {
 	
 	private PrescriptionDataSource datasource;
 
@@ -73,29 +76,32 @@ public class NewPrescriptionActivity extends ActionBarActivity {
 	    String message = editText.getText().toString();
 	    prescription.setPrescriptionName(message);
 	    
-	    editText = (EditText) findViewById(R.id.prescriptionSize);
-	    message = editText.getText().toString();
-	    prescription.setPrescriptionSize(message);
+	    EditText psize = (EditText) findViewById(R.id.prescriptionSize);
+	    String size = psize.getText().toString();
+	    prescription.setPrescriptionSize(size);
 	    
-	    editText = (EditText) findViewById(R.id.prescriptionColor);
-	    message = editText.getText().toString();
-	    prescription.setPrescriptionColor(message);
+	    EditText pcolor = (EditText) findViewById(R.id.prescriptionColor);
+	    String color = pcolor.getText().toString();
+	    prescription.setPrescriptionColor(color);
 
-	    editText = (EditText) findViewById(R.id.prescriptionFrequency);
-	    message = editText.getText().toString();
-	    prescription.setPrescriptionFrequency(message);
+	    EditText pfreq = (EditText) findViewById(R.id.prescriptionFrequency);
+	    String frequency = pfreq.getText().toString();
+	    prescription.setPrescriptionFrequency(frequency);
 	    
-	    editText = (EditText) findViewById(R.id.prescriptionStartdate);
-	    message = editText.getText().toString();
-	    prescription.setPrescriptionStartdate(message);
+	    //editText = (EditText) findViewById(R.id.prescriptionStartdate);//this will be automated
+	    //message = editText.getText().toString();
+	    SimpleDateFormat s = new SimpleDateFormat("hh:mm");
+	    String format = s.format(new Date());
+	    prescription.setPrescriptionStartdate(format);//entered hour and minute
 	    
-	    editText = (EditText) findViewById(R.id.prescriptionAmount);
-	    message = editText.getText().toString();
-	    prescription.setPrescriptionAmount(message);
 	    
-	    editText = (EditText) findViewById(R.id.prescriptionRemaining);
-	    message = editText.getText().toString();
-	    prescription.setPrescriptionRemaining(message);
+	    EditText amt = (EditText) findViewById(R.id.prescriptionAmount);
+	    String amount = amt.getText().toString();
+	    prescription.setPrescriptionAmount(amount);
+	    
+	    EditText rem = (EditText) findViewById(R.id.prescriptionRemaining);
+	    String remaining = rem.getText().toString();
+	    prescription.setPrescriptionRemaining(remaining);
 	    
 	    datasource = new PrescriptionDataSource(this.getApplicationContext());
 	    //save the new prescription

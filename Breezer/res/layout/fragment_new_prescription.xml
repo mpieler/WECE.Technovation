@@ -27,13 +27,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/prescriptionName" />
-        
-       	<TextView
-       	    android:id="@+id/textView3"
-       	    android:layout_width="wrap_content"
-       	    android:layout_height="wrap_content"
-       	    android:paddingTop="10dp"
-       	    android:text="@string/prescriptionStartdate" />
             
      	<TextView
      	    android:id="@+id/textView4"
@@ -84,14 +77,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/prescriptionName"
-            android:textSize="10sp" />
-        
-        <EditText
-            android:id="@+id/prescriptionStartdate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/prescriptionStartdate"
             android:textSize="10sp" />
         
          <EditText

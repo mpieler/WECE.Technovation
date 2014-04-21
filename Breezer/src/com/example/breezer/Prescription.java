@@ -8,7 +8,7 @@ public class Prescription {
 	public String prescriptionColor;
 	public String prescriptionFrequency;
 	public String prescriptionAmount;
-	public String prescriptionStartdate;
+	public String prescriptionStartdate; //assuming person takes medicine at time they enter the reminder, take date from android
 	public String prescriptionRemaining;
 	
 	public Prescription(){

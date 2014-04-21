@@ -74,16 +74,29 @@ public class PrescriptionDataSource {
 	        + " = '" + id + "'", null);
 	  }
 
+	  //problem here, I believe
 	  public List<Prescription> getAllPrescriptions() {
 	    List<Prescription> prescriptions = new ArrayList<Prescription>();
 	    Cursor cursor = database.query(PrescriptionDatabaseActivity.TABLE_NAME,
 	        allColumns, null, null, null, null, null);
-	    cursor.moveToFirst();
-	    while (!cursor.isAfterLast()) {
-	    	Prescription prescription = cursorToPrescription(cursor);
-	      prescriptions.add(prescription);
-	      cursor.moveToNext();
-	    }
+	    //cursor.moveToFirst();
+	    //while (!cursor.isAfterLast()) {
+	    	//Prescription prescription = cursorToPrescription(cursor);
+	      //prescriptions.add(prescription);
+	      //cursor.moveToNext();
+	    //}
+	    if (cursor.moveToFirst()) {
+	           do {
+	               Prescription prescription = new Prescription();
+	               prescription.setPrescriptionName(cursor.getString(0));
+	               prescription.setPrescriptionSize(cursor.getString(1));
+	               prescription.setPrescriptionColor(cursor.getString(2));
+	 
+	               // Add book to books
+	               prescriptions.add(prescription);
+	           } while (cursor.moveToNext());
+	       }
+	    
 	    // make sure to close the cursor
 	    cursor.close();
 	    return prescriptions;

@@ -93,6 +93,9 @@ public class PrescriptionActivity extends Activity {
 				//final String[] membership = new String[size];
 				Prescription[] prescription = new Prescription[size];
 				
+				
+				//this can be simplified 
+				
 				//transfer from array list to array
 				for(int i=0; i < prescriptionList.size(); i++){
 					prescription[i] = prescriptionList.get(i);
