@@ -6,6 +6,7 @@ import java.util.List;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -24,6 +25,10 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 	static String value = null;
 	private PrescriptionDataSource datasource;
 	
+	//@Natasha, first, initialize all static variables here. There's five: size, color, frequency, amount, remaining
+	static int amount;
+	static String color;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,6 +38,16 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 		if(extras != null){
 			value = extras.getString("member");
 		}
+
+		//get prescription
+		Prescription selectedPrescription = setEdit();
+		
+		//@Natasha, second, attach a value to all initialized variables
+		amount = selectedPrescription.getPrescriptionAmount();
+		color = selectedPrescription.getPrescriptionColor();
+		
+		
+		
 		
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -75,18 +90,55 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 			View rootView = inflater.inflate(
 					R.layout.fragment_edit_prescription, container, false);
 			
-			EditText view = (EditText) rootView.findViewById(R.id.prescriptionNameEntered);//view is null
-			view.setHint(value);
+			//set prescription name
+			EditText view = (EditText) rootView.findViewById(R.id.prescriptionNameEntered);
+			view.setText(value, TextView.BufferType.EDITABLE);
 			
+		
 			//@Michelle make template that receives from database
+			//Edit Text field:
+			EditText pColor = (EditText) rootView.findViewById(R.id.prescriptionColorEntered);
+			pColor.setText(color, TextView.BufferType.EDITABLE);
 			
-			//@Natasha add more here using template
+			//Drop Down:
+			Spinner pAmount = (Spinner) rootView.findViewById(R.id.amountSpinner);
+			pAmount.setSelection(amount-1);//(-1) is a special case
+		
+			/*
+			//@Natasha, third assign the value to the view for all remaining variables, keep in mind their type, see templates above
+			//Spinner: amount, size, frequency EditText: color, remaining
+			 * use variables such a pAmount, pSize, etc. and amountSpinner, sizeSpinner for spinners and prescriptionColorEntered, prescriptionRemainingEntered for editTexts
+			*/
 			
 			return rootView;
 		}
+		
 	}
 
 
+	
+	public Prescription setEdit(){
+		//find prescription
+		//PrescriptionDataSource datasource = new PrescriptionDataSource();
+		PrescriptionDataSource data = new PrescriptionDataSource(this.getApplicationContext());
+		data.open();
+		
+		String prescriptionName = value;
+		List<Prescription> list = new ArrayList<Prescription>();
+		list = data.getAllPrescriptions();
+		Prescription selectedPrescription = null;
+		
+		for(int i = 0; i < list.size(); i++){
+			if(prescriptionName.equals(list.get(i).getPrescriptionName())){
+				selectedPrescription = list.get(i);
+				break;
+			}
+		}
+		
+		//selected prescription holds the prescription we are looking for
+		return selectedPrescription;
+	}
+	
 	public void remove(View view) {
 		//find prescription
 		//prescription name is in value
@@ -118,7 +170,7 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 	}
 	
 	//this needs to save the information to the database
-		public void sendMessage(View view) {
+		public void saveChanges(View view) {
 			//@Michelle remove prescription before adding edited one
 			datasource = new PrescriptionDataSource(this.getApplicationContext());
 			datasource.open();
