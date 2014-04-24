@@ -103,8 +103,47 @@ import android.widget.Spinner;
 	    datasource = new PrescriptionDataSource(this.getApplicationContext());
 	    datasource.createPrescription(prescription);
 	    
+	    reminder(prescription);
+	    
 	    //move back to screen
 	    Intent intent = new Intent(this, PrescriptionActivity.class);
 	    startActivity(intent);
+	}
+	
+	public void reminder(Prescription prescription){
+		//create reminder algorithm
+				
+		int remaining = Integer.parseInt(prescription.getPrescriptionRemaining());
+				
+		String str = prescription.getPrescriptionAmount(); 
+		String result = str.substring(0, str.indexOf(" "));
+		int amount = 1;
+		if(result.equals("One")){
+			amount = 1;
+		}
+		else if(result.equals("Two")){
+			amount = 2;
+		}
+		else if(result.equals("Three")){
+			amount = 3;
+		}
+		else if(result.equals("Four")){
+			amount = 4;
+		}
+		else if(result.equals("Five")){
+			amount = 5;
+		}
+		
+		str = prescription.getPrescriptionFrequency(); 
+		result = str.substring(str.indexOf(" ") + 1, str.indexOf(" "));
+		int frequency = Integer.parseInt(result);
+		
+		
+		//how many times the reminder needs to go off
+		int numTimes = remaining/amount;
+		
+		//when the reminder needs to go off
+		//startdate + frequency = when alarm goes off; subtract one of number of times		
+		
 	}
 }
