@@ -993,7 +993,7 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int addprescriptionscreenbg=0x7f020057;
-        public static final int editprecriptionscreenbg=0x7f020058;
+        public static final int editprescriptionbg=0x7f020058;
         public static final int ic_launcher=0x7f020059;
         public static final int medtimelogo=0x7f02005a;
         public static final int medtimemymedbutton=0x7f02005b;
@@ -1001,7 +1001,8 @@ containing a value of this type.
         public static final int medtimescreenbg=0x7f02005d;
         public static final int medtimesymptomsbutton=0x7f02005e;
         public static final int medtimesymptomsbutton2=0x7f02005f;
-        public static final int precriptionscreenbg3=0x7f020060;
+        public static final int newprescriptionbg=0x7f020060;
+        public static final int precriptionscreenbg3=0x7f020061;
     }
     public static final class id {
         public static final int Layout=0x7f050058;
