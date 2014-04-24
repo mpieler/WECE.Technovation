@@ -1,5 +1,8 @@
 package com.example.breezer;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.annotation.SuppressLint;
@@ -69,32 +72,32 @@ import android.widget.Spinner;
 		
 		//initialize prescription
 		Prescription prescription = new Prescription();
-	    EditText editText = (EditText) findViewById(R.id.prescriptionNameEntered);
+	    EditText editText = (EditText) findViewById(R.id.prescriptionName);
 	    String message = editText.getText().toString();
 	    prescription.setPrescriptionName(message);
 	    
 	    Spinner spinnerSize = (Spinner) findViewById(R.id.sizeSpinner);
-	    String size = spinnerSize.toString();
+	    String size = spinnerSize.getSelectedItem().toString();
 	    prescription.setPrescriptionSize(size);
 	    
+	    SimpleDateFormat s = new SimpleDateFormat("hh:mm");
+	    String format = s.format(new Date());
+	    prescription.setPrescriptionStartdate(format);//entered hour and minute
+	    
 	    Spinner spinnerColor = (Spinner) findViewById(R.id.colorSpinner);
-	    String color = spinnerColor.toString();
+	    String color = spinnerColor.getSelectedItem().toString();
 	    prescription.setPrescriptionColor(color);
 	    
 	    Spinner spinnerFrequency = (Spinner) findViewById(R.id.frequencySpinner);
-	    String frequency = spinnerFrequency.toString();
+	    String frequency = spinnerFrequency.getSelectedItem().toString();
 	    prescription.setPrescriptionFrequency(frequency);
 	    
-	    editText = (EditText) findViewById(R.id.prescriptionStartdateEntered);
-	    message = editText.getText().toString();
-	    prescription.setPrescriptionStartdate(message);
-	    
 	    Spinner spinnerAmount = (Spinner) findViewById(R.id.amountSpinner);
-	    String amount = spinnerAmount.toString();
+	    String amount = spinnerAmount.getSelectedItem().toString();
 	    prescription.setPrescriptionAmount(amount);
 	    
 	    Spinner spinnerRemaining = (Spinner) findViewById(R.id.remainingSpinner);
-	    String remaining = spinnerRemaining.toString();
+	    String remaining = spinnerRemaining.getSelectedItem().toString();
 	    prescription.setPrescriptionRemaining(remaining);
 	    
 	    datasource = new PrescriptionDataSource(this.getApplicationContext());

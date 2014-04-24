@@ -113,31 +113,33 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 				
 				if(color.equals(selectedColor[i])){
 					setColor = i;
+					break;
 				}
 			}
 			selectedColor = null;
 			
 			Spinner pColor = (Spinner) rootView.findViewById(R.id.colorSpinner);
-			pColor.setSelection(setColor);//need to set up correct thing, color holds correct thing
+			pColor.setSelection(setColor+1);//need to set up correct thing, color holds correct thing
 			
 			setColor = 0;
 			String[] selectedAmount = new String[5];
-			selectedAmount[0] = "Five at a time";
-			selectedAmount[1] = "Four at a time";
+			selectedAmount[4] = "Five at a time";
+			selectedAmount[3] = "Four at a time";
 			selectedAmount[2] = "Three at a time";
-			selectedAmount[3] = "Two at a time";
-			selectedAmount[4] = "One at a time";
+			selectedAmount[1] = "Two at a time";
+			selectedAmount[0] = "One at a time";
 			for(int i = 0; i < 5; i++){//find out how many items are in pcolor
 				//create array with all amounts
 				
 				if(amount.equals(selectedAmount[i])){
 					setColor = i;
+					break;
 				}
 			}
 			selectedAmount = null;
 			
 			Spinner pAmount = (Spinner) rootView.findViewById(R.id.amountSpinner);
-			pAmount.setSelection(setColor);//need to set up correct thing
+			pAmount.setSelection(setColor+1);//need to set up correct thing
 
 			setColor = 0;
 			String[] selectedSize = new String[3];
@@ -149,12 +151,13 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 				
 				if(size.equals(selectedSize[i])){
 					setColor = i;
+					break;
 				}
 			}
 			selectedSize = null;
 			
 			Spinner pSize = (Spinner) rootView.findViewById(R.id.sizeSpinner);
-			pSize.setSelection(setColor);
+			pSize.setSelection(setColor+1);
 			
 			setColor = 0;
 			String[] selectedRemaining = new String[45];
@@ -203,17 +206,16 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 			selectedRemaining[42] = "43";
 			selectedRemaining[43] = "44";
 			selectedRemaining[44] = "45";
-			for(int i = 0; i < 3; i++){//find out how many items are in pRemaining
-				//create array with all remaining
-				
+			for(int i = 0; i < 45; i++){//find out how many items are in pRemaining
 				if(remaining.equals(selectedRemaining[i])){
 					setColor = i;
+					break;
 				}
 			}
 			selectedRemaining = null;
 			
 			Spinner pRemaining = (Spinner) rootView.findViewById(R.id.remainingSpinner);
-			pRemaining.setSelection(setColor);//need to set up correct thing
+			pRemaining.setSelection(setColor+1);//need to set up correct thing
 			
 			setColor = 0;
 			String[] selectedFrequency = new String[8];
@@ -229,12 +231,13 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 				//create array with all frequencies
 				if(frequency.equals(selectedFrequency[i])){
 					setColor = i;
+					break;
 				}
 			}
 			selectedFrequency = null;
 
 			Spinner pFrequency = (Spinner) rootView.findViewById(R.id.frequencySpinner);
-			pFrequency.setSelection(setColor);//need to set up correct thing
+			pFrequency.setSelection(setColor+1);//need to set up correct thing
 			
 			return rootView;
 		}
@@ -312,15 +315,15 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 		    prescription.setPrescriptionName(message);
 		    
 		    Spinner spinnerSize = (Spinner) findViewById(R.id.sizeSpinner);
-		    String size = spinnerSize.toString();
+		    String size = spinnerSize.getSelectedItem().toString();
 		    prescription.setPrescriptionSize(size);
 		    
 		    Spinner spinnerColor = (Spinner) findViewById(R.id.colorSpinner);
-		    String color = spinnerColor.toString();
+		    String color = spinnerColor.getSelectedItem().toString();
 		    prescription.setPrescriptionColor(color);
 		    
 		    Spinner spinnerFrequency = (Spinner) findViewById(R.id.frequencySpinner);
-		    String frequency = spinnerFrequency.toString();
+		    String frequency = spinnerFrequency.getSelectedItem().toString();
 		    prescription.setPrescriptionFrequency(frequency);
 		    
 		    editText = (EditText) findViewById(R.id.prescriptionStartdateEntered);
@@ -328,11 +331,11 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 		    prescription.setPrescriptionStartdate(message);
 		    
 		    Spinner spinnerAmount = (Spinner) findViewById(R.id.amountSpinner);
-		    String amount = spinnerAmount.toString();
+		    String amount = spinnerAmount.getSelectedItem().toString();
 		    prescription.setPrescriptionAmount(amount);
 		    
 		    Spinner spinnerRemaining = (Spinner) findViewById(R.id.remainingSpinner);
-		    String remaining = spinnerRemaining.toString();
+		    String remaining = spinnerRemaining.getSelectedItem().toString();
 		    prescription.setPrescriptionRemaining(remaining);
 		    
 		    datasource = new PrescriptionDataSource(this.getApplicationContext());
