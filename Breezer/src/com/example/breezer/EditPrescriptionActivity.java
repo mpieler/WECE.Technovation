@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,10 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.os.Build;
 
 public class EditPrescriptionActivity extends ActionBarActivity {
 
@@ -26,16 +22,19 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 	private PrescriptionDataSource datasource;
 	
 	//@Natasha, first, initialize all static variables here. There's five: size, color, frequency, amount, remaining
-	static int amount;
+	static String amount;
 	static String color;
 	static String size;
 	static String frequency;
 	static String remaining;
+	static String startdateValue;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_edit_prescription);
-		//test		
+		
+		//test	
 		Bundle extras = getIntent().getExtras();
 		if(extras != null){
 			value = extras.getString("member");
@@ -50,6 +49,7 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 		size = selectedPrescription.getPrescriptionSize();
 		frequency = selectedPrescription.getPrescriptionFrequency();
 		remaining = selectedPrescription.getPrescriptionRemaining();
+		startdateValue = selectedPrescription.getPrescriptionStartdate();
 		
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -60,7 +60,6 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.edit_prescription, menu);
 		return true;
@@ -96,41 +95,153 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 			EditText view = (EditText) rootView.findViewById(R.id.prescriptionNameEntered);
 			view.setText(value, TextView.BufferType.EDITABLE);
 			
+			EditText startdate = (EditText) rootView.findViewById(R.id.prescriptionStartdateEntered);
+			startdate.setText(startdateValue, TextView.BufferType.EDITABLE);
 		
-			//@Michelle make template that receives from database
-			//Edit Text field:
-			EditText pColor = (EditText) rootView.findViewById(R.id.prescriptionColorEntered);
-			pColor.setText(color, TextView.BufferType.EDITABLE);
+			int setColor = 0;
+			String[] selectedColor = new String[8];
+			selectedColor[0] = "White";
+			selectedColor[1] = "Blue";
+			selectedColor[2] = "Orange";
+			selectedColor[3] = "Red";
+			selectedColor[4] = "Pink";
+			selectedColor[5] = "Brown";
+			selectedColor[6] = "Green";
+			selectedColor[7] = "Purple";
+			for(int i = 0; i < 8; i++){//find out how many items are in pcolor
+				//create array with all colors
+				
+				if(color.equals(selectedColor[i])){
+					setColor = i;
+				}
+			}
+			selectedColor = null;
 			
-			//Drop Down:
+			Spinner pColor = (Spinner) rootView.findViewById(R.id.colorSpinner);
+			pColor.setSelection(setColor);//need to set up correct thing, color holds correct thing
+			
+			setColor = 0;
+			String[] selectedAmount = new String[5];
+			selectedAmount[0] = "Five at a time";
+			selectedAmount[1] = "Four at a time";
+			selectedAmount[2] = "Three at a time";
+			selectedAmount[3] = "Two at a time";
+			selectedAmount[4] = "One at a time";
+			for(int i = 0; i < 5; i++){//find out how many items are in pcolor
+				//create array with all amounts
+				
+				if(amount.equals(selectedAmount[i])){
+					setColor = i;
+				}
+			}
+			selectedAmount = null;
+			
 			Spinner pAmount = (Spinner) rootView.findViewById(R.id.amountSpinner);
-			pAmount.setSelection(amount-1);//(-1) is a special case
-		
-			/*
-			//@Natasha, third assign the value to the view for all remaining variables, keep in mind their type, see templates above
-			//Spinner: amount, size, frequency EditText: remaining, color
-			 * use variables such a pAmount, pSize, etc. and amountSpinner, sizeSpinner for spinners and prescriptionRemainingEntered for editTexts
-			*/
-			//Spinner pSize = (Spinner) rootView.findViewById(R.id.sizeSpinner);
-			//pSize.setSelection(1);
-			
-			EditText pRemaining = (EditText) rootView.findViewById(R.id.prescriptionRemaining);
-			pColor.setText(remaining, TextView.BufferType.EDITABLE);
-			
+			pAmount.setSelection(setColor);//need to set up correct thing
 
-			//Spinner pFrequency = (Spinner) rootView.findViewById(R.id.frequencySpinner);
-			//pFrequency.setSelection(1);
+			setColor = 0;
+			String[] selectedSize = new String[3];
+			selectedSize[0] = "Small";
+			selectedSize[1] = "Medium";
+			selectedSize[2] = "Large";
+			for(int i = 0; i < 3; i++){//find out how many items are in pcolor
+				//create array with all sizes
+				
+				if(size.equals(selectedSize[i])){
+					setColor = i;
+				}
+			}
+			selectedSize = null;
+			
+			Spinner pSize = (Spinner) rootView.findViewById(R.id.sizeSpinner);
+			pSize.setSelection(setColor);
+			
+			setColor = 0;
+			String[] selectedRemaining = new String[45];
+			selectedRemaining[0] = "1";
+			selectedRemaining[1] = "2";
+			selectedRemaining[2] = "3";
+			selectedRemaining[3] = "4";
+			selectedRemaining[4] = "5";
+			selectedRemaining[5] = "6";
+			selectedRemaining[6] = "7";
+			selectedRemaining[7] = "8";
+			selectedRemaining[8] = "9";
+			selectedRemaining[9] = "10";
+			selectedRemaining[10] = "11";
+			selectedRemaining[11] = "12";
+			selectedRemaining[12] = "13";
+			selectedRemaining[13] = "14";
+			selectedRemaining[14] = "15";
+			selectedRemaining[15] = "16";
+			selectedRemaining[16] = "17";
+			selectedRemaining[17] = "18";
+			selectedRemaining[18] = "19";
+			selectedRemaining[19] = "20";
+			selectedRemaining[20] = "21";
+			selectedRemaining[21] = "22";
+			selectedRemaining[22] = "23";
+			selectedRemaining[23] = "24";
+			selectedRemaining[24] = "25";
+			selectedRemaining[25] = "26";
+			selectedRemaining[26] = "27";
+			selectedRemaining[27] = "28";
+			selectedRemaining[28] = "29";
+			selectedRemaining[29] = "30";
+			selectedRemaining[30] = "31";
+			selectedRemaining[31] = "32";
+			selectedRemaining[32] = "33";
+			selectedRemaining[33] = "34";
+			selectedRemaining[34] = "35";
+			selectedRemaining[35] = "36";
+			selectedRemaining[36] = "37";
+			selectedRemaining[37] = "38";
+			selectedRemaining[38] = "39";
+			selectedRemaining[39] = "40";
+			selectedRemaining[40] = "41";
+			selectedRemaining[41] = "42";
+			selectedRemaining[42] = "43";
+			selectedRemaining[43] = "44";
+			selectedRemaining[44] = "45";
+			for(int i = 0; i < 3; i++){//find out how many items are in pRemaining
+				//create array with all remaining
+				
+				if(remaining.equals(selectedRemaining[i])){
+					setColor = i;
+				}
+			}
+			selectedRemaining = null;
+			
+			Spinner pRemaining = (Spinner) rootView.findViewById(R.id.remainingSpinner);
+			pRemaining.setSelection(setColor);//need to set up correct thing
+			
+			setColor = 0;
+			String[] selectedFrequency = new String[8];
+			selectedFrequency[0] = "Every 4 hours";
+			selectedFrequency[1] = "Every 6 hours";
+			selectedFrequency[2] = "Every 8 hours";
+			selectedFrequency[3] = "Every 12 hours";
+			selectedFrequency[4] = "Every 24 hours";
+			selectedFrequency[5] = "Every 48 hours";
+			selectedFrequency[6] = "Every 72 hours";
+			selectedFrequency[7] = "Once a week";
+			for(int i = 0; i < 8; i++){//find out how many items are in pFrequency
+				//create array with all frequencies
+				if(frequency.equals(selectedFrequency[i])){
+					setColor = i;
+				}
+			}
+			selectedFrequency = null;
+
+			Spinner pFrequency = (Spinner) rootView.findViewById(R.id.frequencySpinner);
+			pFrequency.setSelection(setColor);//need to set up correct thing
 			
 			return rootView;
 		}
-		
 	}
 
-
-	
 	public Prescription setEdit(){
 		//find prescription
-		//PrescriptionDataSource datasource = new PrescriptionDataSource();
 		PrescriptionDataSource data = new PrescriptionDataSource(this.getApplicationContext());
 		data.open();
 		
@@ -169,20 +280,15 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 			}
 		}
 		
-		//ListView.listViewFromDB.RemoveAt(0);
-		
 		//move back to screen
 	    Intent intent = new Intent(this, PrescriptionActivity.class);
-	    //EditText editText = (EditText) findViewById(R.id.edit_message);
-	    //String message = editText.getText().toString();
-	    //intent.putExtra(EXTRA_MESSAGE, message);
 	    startActivity(intent);
 		
 	}
 	
 	//this needs to save the information to the database
 		public void saveChanges(View view) {
-			//@Michelle remove prescription before adding edited one
+			//remove prescription before adding edited one
 			datasource = new PrescriptionDataSource(this.getApplicationContext());
 			datasource.open();
 			
@@ -199,52 +305,41 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 				}
 			}
 			
-			
 			//initialize prescription
 			Prescription prescription = new Prescription();
 		    EditText editText = (EditText) findViewById(R.id.prescriptionNameEntered);
 		    String message = editText.getText().toString();
 		    prescription.setPrescriptionName(message);
 		    
-		    editText = (EditText) findViewById(R.id.prescriptionSizeEntered);
-		    message = editText.getText().toString();
-		    prescription.setPrescriptionSize(message);
+		    Spinner spinnerSize = (Spinner) findViewById(R.id.sizeSpinner);
+		    String size = spinnerSize.toString();
+		    prescription.setPrescriptionSize(size);
 		    
-		    editText = (EditText) findViewById(R.id.prescriptionColorEntered);
-		    message = editText.getText().toString();
-		    prescription.setPrescriptionColor(message);
-
-		    editText = (EditText) findViewById(R.id.prescriptionFrequencyEntered);
-		    message = editText.getText().toString();
-		    prescription.setPrescriptionFrequency(message);
+		    Spinner spinnerColor = (Spinner) findViewById(R.id.colorSpinner);
+		    String color = spinnerColor.toString();
+		    prescription.setPrescriptionColor(color);
+		    
+		    Spinner spinnerFrequency = (Spinner) findViewById(R.id.frequencySpinner);
+		    String frequency = spinnerFrequency.toString();
+		    prescription.setPrescriptionFrequency(frequency);
 		    
 		    editText = (EditText) findViewById(R.id.prescriptionStartdateEntered);
 		    message = editText.getText().toString();
 		    prescription.setPrescriptionStartdate(message);
 		    
-		    /*editText = (EditText) findViewById(R.id.prescriptionAmountEntered);
-		    message = editText.getText().toString();
-		    prescription.setPrescriptionAmount(message);*/
-		    
 		    Spinner spinnerAmount = (Spinner) findViewById(R.id.amountSpinner);
-		    int amount = spinnerAmount.getId();
+		    String amount = spinnerAmount.toString();
 		    prescription.setPrescriptionAmount(amount);
 		    
-		    
-		    editText = (EditText) findViewById(R.id.prescriptionRemainingEntered);
-		    message = editText.getText().toString();
-		    prescription.setPrescriptionRemaining(message);
+		    Spinner spinnerRemaining = (Spinner) findViewById(R.id.remainingSpinner);
+		    String remaining = spinnerRemaining.toString();
+		    prescription.setPrescriptionRemaining(remaining);
 		    
 		    datasource = new PrescriptionDataSource(this.getApplicationContext());
-		    //save the new prescription
-		    //datasource.open();
 		    datasource.createPrescription(prescription);
 		    
 		    //move back to screen
 		    Intent intent = new Intent(this, PrescriptionActivity.class);
-		    //EditText editText = (EditText) findViewById(R.id.edit_message);
-		    //String message = editText.getText().toString();
-		    //intent.putExtra(EXTRA_MESSAGE, message);
 		    startActivity(intent);
 		}
 

@@ -18,7 +18,8 @@
     <LinearLayout
         android:layout_width="150dp"
         android:layout_height="334dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="3dp"
         android:layout_marginTop="65dp"
         android:orientation="vertical" >
         
@@ -26,49 +27,56 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/prescriptionName" />
+            android:text="@string/prescriptionName"
+            android:textSize="16sp" />
         
        	<TextView
        	    android:id="@+id/textView3"
        	    android:layout_width="wrap_content"
        	    android:layout_height="wrap_content"
        	    android:paddingTop="10dp"
-       	    android:text="@string/prescriptionStartdate" />
+       	    android:text="@string/prescriptionStartdate"
+       	    android:textSize="16sp" />
             
      	<TextView
      	    android:id="@+id/textView4"
      	    android:layout_width="wrap_content"
      	    android:layout_height="wrap_content"
      	    android:paddingTop="10dp"
-     	    android:text="@string/prescriptionAmount" />
+     	    android:text="@string/prescriptionAmount"
+     	    android:textSize="16sp" />
      	
      	<TextView
      	    android:id="@+id/textView7"
      	    android:layout_width="wrap_content"
      	    android:layout_height="wrap_content"
      	    android:paddingTop="10dp"
-     	    android:text="@string/prescriptionFrequency" />
+     	    android:text="@string/prescriptionFrequency"
+     	    android:textSize="16sp" />
      	
      	<TextView
      	    android:id="@+id/textView2"
      	    android:layout_width="wrap_content"
      	    android:layout_height="wrap_content"
      	    android:paddingTop="10dp"
-     	    android:text="@string/prescriptionRemaining" />
+     	    android:text="@string/prescriptionRemaining"
+     	    android:textSize="16sp" />
      	
      	<TextView
      	    android:id="@+id/textView6"
      	    android:layout_width="wrap_content"
      	    android:layout_height="wrap_content"
      	    android:paddingTop="15dp"
-     	    android:text="@string/prescriptionSize" />
+     	    android:text="@string/prescriptionSize"
+     	    android:textSize="16sp" />
      	
      	<TextView
      	    android:id="@+id/textView5"
      	    android:layout_width="wrap_content"
      	    android:layout_height="wrap_content"
      	    android:paddingTop="10dp"
-     	    android:text="@string/prescriptionColor" />
+     	    android:text="@string/prescriptionColor"
+     	    android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -84,7 +92,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint=""
-            android:textSize="10sp" />
+            android:textSize="16sp" />
         
         <EditText
             android:id="@+id/prescriptionStartdateEntered"
@@ -92,55 +100,47 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint=""
-            android:textSize="10sp" />
-        
+            android:textSize="16sp" />
         
         <Spinner
-        android:id="@+id/amountSpinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/amount_arrays"
-        android:prompt="@string/amount_prompt" />
-        
-         <EditText
-             android:id="@+id/prescriptionAmountEntered"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:ems="10"
-             android:hint=""
-             android:textSize="10sp" />
+            android:id="@+id/amountSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/amount_arrays"
+            android:paddingTop="11dp"
+            android:prompt="@string/amount_prompt" />
          
-         <EditText
-             android:id="@+id/prescriptionFrequencyEntered"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:ems="10"
-             android:hint=""
-             android:textSize="10sp" />
+      	<Spinner
+      	    android:id="@+id/frequencySpinner"
+      	    android:layout_width="match_parent"
+      	    android:layout_height="wrap_content"
+      	    android:entries="@array/frequency_arrays"
+      	    android:paddingTop="16dp"
+      	    android:prompt="@string/frequency_prompt" />
          
-       	<EditText
-       	    android:id="@+id/prescriptionRemainingEntered"
-       	    android:layout_width="wrap_content"
+       	<Spinner
+       	    android:id="@+id/remainingSpinner"
+       	    android:layout_width="match_parent"
        	    android:layout_height="wrap_content"
-       	    android:ems="10"
-       	    android:hint=""
-       	    android:textSize="10sp" />
+       	    android:entries="@array/remaining_arrays"
+       	    android:paddingTop="22dp"
+       	    android:prompt="@string/remaining_prompt" />
     	
-       	<EditText
-       	    android:id="@+id/prescriptionSizeEntered"
-       	    android:layout_width="wrap_content"
-       	    android:layout_height="wrap_content"
-       	    android:ems="10"
-       	    android:hint=""
-       	    android:textSize="10sp" />
+		<Spinner
+		    android:id="@+id/sizeSpinner"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:entries="@array/size_arrays"
+		    android:paddingTop="6dp"
+		    android:prompt="@string/size_prompt" />
        	
-       	<EditText
-       	    android:id="@+id/prescriptionColorEntered"
-       	    android:layout_width="wrap_content"
+       	<Spinner
+       	    android:id="@+id/colorSpinner"
+       	    android:layout_width="match_parent"
        	    android:layout_height="wrap_content"
-       	    android:ems="10"
-       	    android:hint=""
-       	    android:textSize="10sp" />
+       	    android:entries="@array/color_arrays"
+       	    android:paddingTop="6dp"
+       	    android:prompt="@string/color_prompt" />
 
     </LinearLayout>
 

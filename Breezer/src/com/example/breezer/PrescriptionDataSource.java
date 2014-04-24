@@ -92,7 +92,7 @@ public class PrescriptionDataSource {
 	               prescription.setPrescriptionSize(cursor.getString(1));
 	               prescription.setPrescriptionColor(cursor.getString(2));
 	               prescription.setPrescriptionFrequency(cursor.getString(3));
-	               prescription.setPrescriptionAmount(cursor.getInt(4));
+	               prescription.setPrescriptionAmount(cursor.getString(4));
 	               prescription.setPrescriptionStartdate(cursor.getString(5));
 	               prescription.setPrescriptionRemaining(cursor.getString(6));
 	               

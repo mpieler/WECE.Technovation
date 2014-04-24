@@ -1,7 +1,5 @@
 package com.example.breezer;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.annotation.SuppressLint;
@@ -13,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 
 @SuppressLint("SimpleDateFormat") public class NewPrescriptionActivity extends ActionBarActivity {
@@ -50,9 +49,7 @@ import android.widget.EditText;
 		return super.onOptionsItemSelected(item);
 	}
 
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
+
 	public static class PlaceholderFragment extends Fragment {
 
 		public PlaceholderFragment() {
@@ -72,47 +69,39 @@ import android.widget.EditText;
 		
 		//initialize prescription
 		Prescription prescription = new Prescription();
-	    EditText editText = (EditText) findViewById(R.id.prescriptionName);
+	    EditText editText = (EditText) findViewById(R.id.prescriptionNameEntered);
 	    String message = editText.getText().toString();
 	    prescription.setPrescriptionName(message);
 	    
-	    EditText psize = (EditText) findViewById(R.id.prescriptionSize);
-	    String size = psize.getText().toString();
+	    Spinner spinnerSize = (Spinner) findViewById(R.id.sizeSpinner);
+	    String size = spinnerSize.toString();
 	    prescription.setPrescriptionSize(size);
 	    
-	    EditText pcolor = (EditText) findViewById(R.id.prescriptionColor);
-	    String color = pcolor.getText().toString();
+	    Spinner spinnerColor = (Spinner) findViewById(R.id.colorSpinner);
+	    String color = spinnerColor.toString();
 	    prescription.setPrescriptionColor(color);
-
-	    EditText pfreq = (EditText) findViewById(R.id.prescriptionFrequency);
-	    String frequency = pfreq.getText().toString();
+	    
+	    Spinner spinnerFrequency = (Spinner) findViewById(R.id.frequencySpinner);
+	    String frequency = spinnerFrequency.toString();
 	    prescription.setPrescriptionFrequency(frequency);
 	    
-	    //editText = (EditText) findViewById(R.id.prescriptionStartdate);//this will be automated
-	    //message = editText.getText().toString();
-	    SimpleDateFormat s = new SimpleDateFormat("hh:mm");
-	    String format = s.format(new Date());
-	    prescription.setPrescriptionStartdate(format);//entered hour and minute
+	    editText = (EditText) findViewById(R.id.prescriptionStartdateEntered);
+	    message = editText.getText().toString();
+	    prescription.setPrescriptionStartdate(message);
 	    
-	    
-	    EditText amt = (EditText) findViewById(R.id.prescriptionAmount);
-	    int amount = Integer.parseInt(amt.getText().toString());
+	    Spinner spinnerAmount = (Spinner) findViewById(R.id.amountSpinner);
+	    String amount = spinnerAmount.toString();
 	    prescription.setPrescriptionAmount(amount);
 	    
-	    EditText rem = (EditText) findViewById(R.id.prescriptionRemaining);
-	    String remaining = rem.getText().toString();
+	    Spinner spinnerRemaining = (Spinner) findViewById(R.id.remainingSpinner);
+	    String remaining = spinnerRemaining.toString();
 	    prescription.setPrescriptionRemaining(remaining);
 	    
 	    datasource = new PrescriptionDataSource(this.getApplicationContext());
-	    //save the new prescription
-	    //datasource.open();
 	    datasource.createPrescription(prescription);
 	    
 	    //move back to screen
 	    Intent intent = new Intent(this, PrescriptionActivity.class);
-	    //EditText editText = (EditText) findViewById(R.id.edit_message);
-	    //String message = editText.getText().toString();
-	    //intent.putExtra(EXTRA_MESSAGE, message);
 	    startActivity(intent);
 	}
 }
