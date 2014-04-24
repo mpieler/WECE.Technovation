@@ -103,7 +103,7 @@ import android.widget.Spinner;
 	    datasource = new PrescriptionDataSource(this.getApplicationContext());
 	    datasource.createPrescription(prescription);
 	    
-	    reminder(prescription);
+	    //reminder(prescription);
 	    
 	    //move back to screen
 	    Intent intent = new Intent(this, PrescriptionActivity.class);
@@ -113,6 +113,8 @@ import android.widget.Spinner;
 	public void reminder(Prescription prescription){
 		//create reminder algorithm
 				
+		
+		//this doesn't work completely yet
 		int remaining = Integer.parseInt(prescription.getPrescriptionRemaining());
 				
 		String str = prescription.getPrescriptionAmount(); 
