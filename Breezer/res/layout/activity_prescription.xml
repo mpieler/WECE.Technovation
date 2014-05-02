@@ -1,12 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mymedbg"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.example.breezer.PrescriptionActivity$PlaceholderFragment" >
 
 	 <ListView
@@ -14,21 +11,41 @@
 	     android:layout_width="300dp"
 	     android:layout_height="340dp"
 	     android:layout_centerVertical="true"
+	     android:layout_marginLeft="30dp"
+	     android:layout_marginTop="75dp"
 	     android:fastScrollEnabled="true"
 	     android:scrollingCache="true"
 	     android:visibility="visible" >
+
 	 </ListView>
 
-	 <TextView
-	     android:id="@+id/addPrescriptionTitle"
-	     android:layout_width="wrap_content"
-	     android:layout_height="wrap_content"
-	     android:layout_alignParentBottom="true"
-	     android:layout_alignRight="@+id/listViewFromDB"
-	     android:layout_marginBottom="18dp"
-	     android:clickable="true"
-	     android:onClick="moveToAddNewPrescription"
-	     android:text="@string/addPrescription"
-	     android:textSize="20sp" />
+	 <LinearLayout
+	     android:layout_width="match_parent"
+	     android:layout_height="wrap_content" >
+
+	     <TextView
+	         android:id="@+id/home"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_marginLeft="60dp"
+	         android:layout_marginTop="60dp"
+	         android:clickable="true"
+	         android:onClick="moveToHome"
+	         android:text="@string/home"
+	         android:textSize="18sp" />
+	     
+	     <TextView
+	         android:id="@+id/addPrescriptionTitle"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_marginBottom="18dp"
+	         android:layout_marginLeft="90dp"
+	         android:layout_marginTop="60dp"
+	         android:clickable="true"
+	         android:onClick="moveToAddNewPrescription"
+	         android:text="@string/addPrescription"
+	         android:textSize="18sp" />
+
+	 </LinearLayout>
 	
-</RelativeLayout>
+</LinearLayout>

@@ -31,29 +31,25 @@
     <string name="title_activity_edit_symptoms">Edit Symptoms Activity</string>
     <string name="title_activity_saved_prescription">SavedPrescription</string>
     <string name="title_activity_prescription_database">PrescriptionDatabaseActivity</string>
-    <string name="title_activity_feed_reader_db_helper">FeedReaderDbHelperActivity</string>
-    <string name="add_symptom_other">Write your symptoms here.</string>
-    <string name="seekbar_tracking_on">Tracking on</string>
-    <string name="seekbar_tracking_off">Tracking off</string>
-    <string name="seekbar_from_touch">from touch</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
     <string name="title_activity_edit__prescription_">Edit_Prescription_Activity</string>
     <string name="title_activity_edit_prescription">EditPrescriptionActivity</string>
-
     <string name="amount_prompt">How many/much do you take at a time?</string>
- 
+
     <string-array name="amount_arrays">
-        <item> </item>
+        <item></item>
         <item>One at a time</item>
         <item>Two at a time</item>
         <item>Three at a time</item>
         <item>Four at a time</item>
         <item>Five at a time</item>
     </string-array>
-    
+
     <string name="frequency_prompt">How often do you take the medication?</string>
- 
+
     <string-array name="frequency_arrays">
-        <item> </item>
+        <item></item>
         <item>Every 4 hours</item>
         <item>Every 6 hours</item>
         <item>Every 8 hours</item>
@@ -63,20 +59,20 @@
         <item>Every 72 hours</item>
         <item>Once a week</item>
     </string-array>
-    
-   <string name="size_prompt">What is the size of your medication?</string>
- 
+
+    <string name="size_prompt">What is the size of your medication?</string>
+
     <string-array name="size_arrays">
-        <item> </item>
+        <item></item>
         <item>Small</item>
         <item>Medium</item>
         <item>Large</item>
     </string-array>
-    
+
     <string name="color_prompt">What is the color of your medication?</string>
- 
+
     <string-array name="color_arrays">
-        <item> </item>
+        <item></item>
         <item>White</item>
         <item>Blue</item>
         <item>Orange</item>
@@ -86,11 +82,11 @@
         <item>Green</item>
         <item>Purple</item>
     </string-array>
-    
+
     <string name="remaining_prompt">How much medication do you have remaining total? (If you have to take more than is listed, please update the amount remaining when you have a smaller amount left.)</string>
-    
+
     <string-array name="remaining_arrays">
-        <item> </item>
+        <item></item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -137,5 +133,7 @@
         <item>44</item>
         <item>45</item>
     </string-array>
-    
+
+    <string name="title_activity_history">HistoryActivity</string>
+
 </resources>

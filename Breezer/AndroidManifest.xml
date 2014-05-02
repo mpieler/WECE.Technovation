@@ -70,6 +70,10 @@
             android:name="com.example.breezer.EditPrescriptionActivity"
             android:label="@string/title_activity_edit_prescription" >
         </activity>
+        <activity
+            android:name="com.example.breezer.HistoryActivity"
+            android:label="@string/title_activity_history" >
+        </activity>
     </application>
 
 </manifest>
