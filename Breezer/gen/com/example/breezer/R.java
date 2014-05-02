@@ -1022,7 +1022,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05005f;
+        public static final int action_settings=0x7f05005e;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int addButton=0x7f050057;
         public static final int addPrescriptionTitle=0x7f05003e;
@@ -1054,9 +1054,9 @@ containing a value of this type.
         public static final int imageButton1=0x7f050053;
         public static final int imageButton2=0x7f050052;
         public static final int imageView1=0x7f050050;
-        public static final int item_name=0x7f05005e;
-        public static final int item_subtitle=0x7f05005d;
-        public static final int item_text=0x7f05005c;
+        public static final int item_name=0x7f05005d;
+        public static final int item_subtitle=0x7f05005c;
+        public static final int item_text=0x7f05005b;
         public static final int listMode=0x7f050001;
         public static final int listViewFromDB=0x7f05003d;
         public static final int list_item=0x7f050029;
@@ -1072,7 +1072,6 @@ containing a value of this type.
         public static final int radio=0x7f05002f;
         public static final int remainingSpinner=0x7f05004a;
         public static final int removeButton=0x7f05004e;
-        public static final int saveButton=0x7f05005b;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
