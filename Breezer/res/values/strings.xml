@@ -20,20 +20,15 @@
     <string name="prescriptionStartdate">Medication start time: </string>
     <string name="prescriptionRemaining">Total amount of medicine left: </string>
     <string name="saveButton">Save</string>
-    <string name="deleteButton">Delete </string>
+    <string name="deleteButton">Delete</string>
     <string name="title_activity_symptoms">Symptoms Activity</string>
-    <string name="add_symptoms">Add New Symptoms</string>
-    <string name="view_symptoms">View Symptom Log</string>
-    <string name="title_activity_add_symptom">Add Symptom Activity</string>
-    <string name="title_activity_symtoms_log">Symtoms Log Activity</string>
     <string name="title_activity_options">Options Activity</string>
-    <string name="edit_symptom">Edit Symptoms</string>
-    <string name="title_activity_edit_symptoms">Edit Symptoms Activity</string>
-    <string name="title_activity_saved_prescription">SavedPrescription</string>
     <string name="title_activity_prescription_database">PrescriptionDatabaseActivity</string>
     <string name="home">Home</string>
     <string name="history">History</string>
-    <string name="title_activity_edit__prescription_">Edit_Prescription_Activity</string>
+    <string name="cancel">Cancel</string>
+    <string name="finish">Finish</string>
+    <string name="next">Next</string>
     <string name="title_activity_edit_prescription">EditPrescriptionActivity</string>
     <string name="amount_prompt">How many/much do you take at a time?</string>
 
@@ -135,5 +130,7 @@
     </string-array>
 
     <string name="title_activity_history">HistoryActivity</string>
+    <string name="title_activity_symptom_intensity">SymptomIntensityActivity</string>
+    <string name="title_activity_symptom_body">SymptomBodyActivity</string>
 
 </resources>

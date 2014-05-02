@@ -148,4 +148,13 @@ import android.widget.Spinner;
 		//startdate + frequency = when alarm goes off; subtract one of number of times		
 		
 	}
+	
+	/** Called when the user clicks Home link */
+	public void moveToPrescription(View view) {
+	    Intent intent = new Intent(this, PrescriptionActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
+	}
 }

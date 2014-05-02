@@ -3,6 +3,7 @@ package com.example.breezer;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -59,6 +60,15 @@ public class HistoryActivity extends ActionBarActivity {
 					container, false);
 			return rootView;
 		}
+	}
+	
+	/** Called when the user clicks Home link */
+	public void moveToMain(View view) {
+	    Intent intent = new Intent(this, MainActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
 	}
 
 }

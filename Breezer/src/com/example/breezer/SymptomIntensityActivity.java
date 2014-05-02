@@ -3,19 +3,21 @@ package com.example.breezer;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.os.Build;
 
-public class EditSymptomsActivity extends ActionBarActivity {
+public class SymptomIntensityActivity extends ActionBarActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_edit_symptoms);
+		setContentView(R.layout.activity_symptom_intensity);
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
@@ -27,7 +29,7 @@ public class EditSymptomsActivity extends ActionBarActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.edit_symptoms, menu);
+		getMenuInflater().inflate(R.menu.symptom_intensity, menu);
 		return true;
 	}
 
@@ -54,10 +56,28 @@ public class EditSymptomsActivity extends ActionBarActivity {
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_edit_symptoms,
-					container, false);
+			View rootView = inflater.inflate(
+					R.layout.fragment_symptom_intensity, container, false);
 			return rootView;
 		}
+	}
+	
+	/** Called when the user clicks Options link */
+	public void moveToMain(View view) {
+	    Intent intent = new Intent(this, MainActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
+	}
+	
+	/** Called when the user clicks Options link */
+	public void moveToSymptomBody(View view) {
+	    Intent intent = new Intent(this, SymptomBodyActivity.class);
+	    //EditText editText = (EditText) findViewById(R.id.edit_message);
+	    //String message = editText.getText().toString();
+	    //intent.putExtra(EXTRA_MESSAGE, message);
+	    startActivity(intent);
 	}
 
 }

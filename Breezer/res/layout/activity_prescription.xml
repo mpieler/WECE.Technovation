@@ -10,7 +10,6 @@
 	     android:id="@+id/listViewFromDB"
 	     android:layout_width="300dp"
 	     android:layout_height="340dp"
-	     android:layout_centerVertical="true"
 	     android:layout_marginLeft="30dp"
 	     android:layout_marginTop="75dp"
 	     android:fastScrollEnabled="true"
@@ -30,7 +29,7 @@
 	         android:layout_marginLeft="60dp"
 	         android:layout_marginTop="60dp"
 	         android:clickable="true"
-	         android:onClick="moveToHome"
+	         android:onClick="moveToMain"
 	         android:text="@string/home"
 	         android:textSize="18sp" />
 	     

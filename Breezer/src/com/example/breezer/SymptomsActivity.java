@@ -61,27 +61,18 @@ public class SymptomsActivity extends ActionBarActivity {
 			return rootView;
 		}
 	}
-	/** Called when the user clicks Add_Symptom link */
-	public void moveToAdd_Symptom(View view) {
-	    Intent intent = new Intent(this, AddSymptomActivity.class);
-	    //EditText editText = (EditText) findViewById(R.id.edit_message);
-	    //String message = editText.getText().toString();
-	    //intent.putExtra(EXTRA_MESSAGE, message);
-	    startActivity(intent);
-	}
-
-	/** Called when the user clicks Symptoms_Log link */
-	public void moveToSymptoms_Log(View view) {
-	    Intent intent = new Intent(this, SymtomsLogActivity.class);
+	/** Called when the user clicks Options link */
+	public void moveToMain(View view) {
+	    Intent intent = new Intent(this, MainActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
 	    //String message = editText.getText().toString();
 	    //intent.putExtra(EXTRA_MESSAGE, message);
 	    startActivity(intent);
 	}
 	
-	/** Called when the user clicks Edit_Symptoms link */
-	public void moveToEdit_Symptoms(View view) {
-	    Intent intent = new Intent(this, EditSymptomsActivity.class);
+	/** Called when the user clicks Options link */
+	public void moveToSymptomIntensity(View view) {
+	    Intent intent = new Intent(this, SymptomIntensityActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
 	    //String message = editText.getText().toString();
 	    //intent.putExtra(EXTRA_MESSAGE, message);
