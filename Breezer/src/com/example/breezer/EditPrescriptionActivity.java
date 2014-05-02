@@ -161,7 +161,7 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 			
 			setColor = 0;
 			for(int i = 0; i < 45; i++){//find out how many items are in pRemaining
-				if(remaining.equals(Integer.toString(i))){
+				if(remaining.equals(Integer.toString(i+1))){
 					setColor = i;
 					break;
 				}
