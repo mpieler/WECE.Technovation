@@ -160,59 +160,12 @@ public class EditPrescriptionActivity extends ActionBarActivity {
 			pSize.setSelection(setColor+1);
 			
 			setColor = 0;
-			String[] selectedRemaining = new String[45];
-			selectedRemaining[0] = "1";
-			selectedRemaining[1] = "2";
-			selectedRemaining[2] = "3";
-			selectedRemaining[3] = "4";
-			selectedRemaining[4] = "5";
-			selectedRemaining[5] = "6";
-			selectedRemaining[6] = "7";
-			selectedRemaining[7] = "8";
-			selectedRemaining[8] = "9";
-			selectedRemaining[9] = "10";
-			selectedRemaining[10] = "11";
-			selectedRemaining[11] = "12";
-			selectedRemaining[12] = "13";
-			selectedRemaining[13] = "14";
-			selectedRemaining[14] = "15";
-			selectedRemaining[15] = "16";
-			selectedRemaining[16] = "17";
-			selectedRemaining[17] = "18";
-			selectedRemaining[18] = "19";
-			selectedRemaining[19] = "20";
-			selectedRemaining[20] = "21";
-			selectedRemaining[21] = "22";
-			selectedRemaining[22] = "23";
-			selectedRemaining[23] = "24";
-			selectedRemaining[24] = "25";
-			selectedRemaining[25] = "26";
-			selectedRemaining[26] = "27";
-			selectedRemaining[27] = "28";
-			selectedRemaining[28] = "29";
-			selectedRemaining[29] = "30";
-			selectedRemaining[30] = "31";
-			selectedRemaining[31] = "32";
-			selectedRemaining[32] = "33";
-			selectedRemaining[33] = "34";
-			selectedRemaining[34] = "35";
-			selectedRemaining[35] = "36";
-			selectedRemaining[36] = "37";
-			selectedRemaining[37] = "38";
-			selectedRemaining[38] = "39";
-			selectedRemaining[39] = "40";
-			selectedRemaining[40] = "41";
-			selectedRemaining[41] = "42";
-			selectedRemaining[42] = "43";
-			selectedRemaining[43] = "44";
-			selectedRemaining[44] = "45";
 			for(int i = 0; i < 45; i++){//find out how many items are in pRemaining
-				if(remaining.equals(selectedRemaining[i])){
+				if(remaining.equals(Integer.toString(i))){
 					setColor = i;
 					break;
 				}
 			}
-			selectedRemaining = null;
 			
 			Spinner pRemaining = (Spinner) rootView.findViewById(R.id.remainingSpinner);
 			pRemaining.setSelection(setColor+1);//need to set up correct thing
