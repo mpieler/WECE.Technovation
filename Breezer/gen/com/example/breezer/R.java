@@ -995,14 +995,17 @@ containing a value of this type.
         public static final int addprescriptionscreenbg=0x7f020057;
         public static final int editprescriptionbg=0x7f020058;
         public static final int ic_launcher=0x7f020059;
-        public static final int medtimelogo=0x7f02005a;
-        public static final int medtimemymedbutton=0x7f02005b;
-        public static final int medtimemymedbutton2=0x7f02005c;
-        public static final int medtimescreenbg=0x7f02005d;
-        public static final int medtimesymptomsbutton=0x7f02005e;
-        public static final int medtimesymptomsbutton2=0x7f02005f;
-        public static final int newprescriptionbg=0x7f020060;
-        public static final int precriptionscreenbg3=0x7f020061;
+        public static final int medhistorybg=0x7f02005a;
+        public static final int medtimelogo=0x7f02005b;
+        public static final int medtimemymedbutton=0x7f02005c;
+        public static final int medtimemymedbutton2=0x7f02005d;
+        public static final int medtimescreenbg=0x7f02005e;
+        public static final int medtimesymptomsbutton=0x7f02005f;
+        public static final int medtimesymptomsbutton2=0x7f020060;
+        public static final int mymedbg=0x7f020061;
+        public static final int newprescriptionbg=0x7f020062;
+        public static final int optionsbg=0x7f020063;
+        public static final int precriptionscreenbg3=0x7f020064;
     }
     public static final class id {
         public static final int Layout=0x7f050058;
@@ -1176,7 +1179,8 @@ containing a value of this type.
         public static final int fragment_symptoms=0x7f030029;
         public static final int fragment_symtoms_log=0x7f03002a;
         public static final int item_layout=0x7f03002b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002c;
+        public static final int med_history=0x7f03002c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002d;
     }
     public static final class menu {
         public static final int add_symptom=0x7f0d0000;
