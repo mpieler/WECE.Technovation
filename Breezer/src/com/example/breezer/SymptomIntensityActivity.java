@@ -3,6 +3,7 @@ package com.example.breezer;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class SymptomIntensityActivity extends ActionBarActivity {
+public class SymptomIntensityActivity extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

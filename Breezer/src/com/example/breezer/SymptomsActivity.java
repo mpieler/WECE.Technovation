@@ -3,6 +3,7 @@ package com.example.breezer;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
 
-public class SymptomsActivity extends ActionBarActivity {
+public class SymptomsActivity extends FragmentActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +73,7 @@ public class SymptomsActivity extends ActionBarActivity {
 	
 	/** Called when the user clicks Options link */
 	public void moveToSymptomIntensity(View view) {
-	    Intent intent = new Intent(this, SymptomIntensityActivity.class);
+	    Intent intent = new Intent(this, SymptomBodyActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
 	    //String message = editText.getText().toString();
 	    //intent.putExtra(EXTRA_MESSAGE, message);

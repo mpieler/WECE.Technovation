@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class MainActivity extends ActionBarActivity {
-    public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +89,7 @@ public class MainActivity extends ActionBarActivity {
 	    startActivity(intent);
 	}
 	
-	/** Called when the user clicks Options link */
+	/** Called when the user clicks History link */
 	public void moveToHistory(View view) {
 	    Intent intent = new Intent(this, HistoryActivity.class);
 	    //EditText editText = (EditText) findViewById(R.id.edit_message);
