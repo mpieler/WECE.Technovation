@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="wece.technovation.medtime"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/medtimelogo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="wece.technovation.medtime.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.PrescriptionActivity"
+            android:label="@string/title_activity_prescription" >
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.NewPrescriptionActivity"
+            android:label="@string/title_activity_new_prescription" >
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.SymptomsActivity"
+            android:label="@string/title_activity_symptoms" >
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.OptionsActivity"
+            android:label="@string/title_activity_options" >
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.PrescriptionDatabaseActivity"
+            android:label="@string/title_activity_prescription_database" >
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.EditPrescriptionActivity"
+            android:label="@string/title_activity_edit_prescription" >
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.HistoryActivity"
+            android:label="@string/title_activity_history" >
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.SymptomIntensityActivity"
+            android:label="@string/title_activity_symptom_intensity" >
+        </activity>
+        <activity
+            android:name="wece.technovation.medtime.SymptomBodyActivity"
+            android:label="@string/title_activity_symptom_body" >
+        </activity>
+    </application>
+
+</manifest>
