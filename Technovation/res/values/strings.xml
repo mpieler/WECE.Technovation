@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MedTime</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="prescription">Prescription</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="options">Options</string>
+    <string name="addPrescription">Add Prescription</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">Main Activity</string>
+    <string name="title_activity_prescription">Prescription Activity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_new_prescription">New Prescription Activity</string>
+    <string name="prescriptionName">Name of Medication: </string>
+    <string name="prescriptionFrequency">How often do you take you medication: </string>
+    <string name="prescriptionSize">Size of medication: </string>
+    <string name="prescriptionColor">Color of medication: </string>
+    <string name="prescriptionAmount">Amount: </string>
+    <string name="prescriptionStartdate">Medication start time: </string>
+    <string name="prescriptionRemaining">Total amount of medicine left: </string>
+    <string name="saveButton">Save</string>
+    <string name="deleteButton">Delete</string>
+    <string name="title_activity_symptoms">Symptoms Activity</string>
+    <string name="title_activity_options">Options Activity</string>
+    <string name="title_activity_prescription_database">PrescriptionDatabaseActivity</string>
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="cancel">Cancel</string>
+    <string name="finish">Finish</string>
+    <string name="next">Next</string>
+    <string name="title_activity_edit_prescription">EditPrescriptionActivity</string>
+    <string name="amount_prompt">How many/much do you take at a time?</string>
+
+    <string-array name="amount_arrays">
+        <item></item>
+        <item>One at a time</item>
+        <item>Two at a time</item>
+        <item>Three at a time</item>
+        <item>Four at a time</item>
+        <item>Five at a time</item>
+    </string-array>
+
+    <string name="frequency_prompt">How often do you take the medication?</string>
+
+    <string-array name="frequency_arrays">
+        <item></item>
+        <item>Every 4 hours</item>
+        <item>Every 6 hours</item>
+        <item>Every 8 hours</item>
+        <item>Every 12 hours</item>
+        <item>Every 24 hours</item>
+        <item>Every 48 hours</item>
+        <item>Every 72 hours</item>
+        <item>Once a week</item>
+    </string-array>
+
+    <string name="size_prompt">What is the size of your medication?</string>
+
+    <string-array name="size_arrays">
+        <item></item>
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    <string name="color_prompt">What is the color of your medication?</string>
+
+    <string-array name="color_arrays">
+        <item></item>
+        <item>White</item>
+        <item>Blue</item>
+        <item>Orange</item>
+        <item>Red</item>
+        <item>Pink</item>
+        <item>Brown</item>
+        <item>Green</item>
+        <item>Purple</item>
+    </string-array>
+
+    <string name="remaining_prompt">How much medication do you have remaining total? (If you have to take more than is listed, please update the amount remaining when you have a smaller amount left.)</string>
+
+    <string-array name="remaining_arrays">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+    </string-array>
+
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="title_activity_symptom_intensity">SymptomIntensityActivity</string>
+    <string name="title_activity_symptom_body">SymptomBodyActivity</string>
+
+</resources>
